@@ -19,6 +19,7 @@ export const metadata = {
   title: "Sachin.net — Professional Website & Software Development Services",
   description:
     "We build modern websites, web applications, school management systems, e-commerce stores, ERP and custom software solutions that grow your business.",
+
   keywords: [
     "website development",
     "school management system",
@@ -27,6 +28,20 @@ export const metadata = {
     "mobile app development",
     "software company india",
   ],
+
+  verification: {
+    google: "DFle5qV2FDhcajUMAZcQ270aljqh1lRPGYuMiH8mFWI",
+  },
+
+  openGraph: {
+    title: "Sachin.net",
+    description:
+      "Professional Website & Software Development Services",
+    url: "https://sachin-net.netlify.app",
+    siteName: "Sachin.net",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export const viewport = {
@@ -37,7 +52,10 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col safe-bottom">
         <Navbar />
         <main className="flex-1">{children}</main>
