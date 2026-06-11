@@ -2,6 +2,7 @@ import Icon from "./Icon";
 import { socialLinks } from "@/lib/data";
 
 const brandHover = {
+  whatsapp: "hover:bg-[#25D366] hover:text-white hover:border-[#25D366]",
   github: "hover:bg-slate-600 hover:text-white hover:border-slate-500",
   facebook: "hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2]",
   instagram: "hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F]",
