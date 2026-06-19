@@ -42,3 +42,4 @@ netlify-twilio-env.txt
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+node_modules
