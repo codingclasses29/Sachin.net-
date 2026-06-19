@@ -7,11 +7,22 @@ import { site } from "@/lib/data";
 const WELCOME =
   "Namaste! Main Sachin.net ka AI assistant hoon. Website, software, pricing, School ERP — kuch bhi poochiye!";
 
+const PROVIDER_LABELS = {
+  gemini: "Gemini AI",
+  groq: "Groq AI",
+  openrouter: "OpenRouter AI",
+  openai: "ChatGPT AI",
+  ollama: "AI Assistant",
+  local: "Sachin.net AI",
+};
+
 export default function AIChatbot() {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [providerLabel, setProviderLabel] = useState("AI Assistant");
+  const [providerLabel, setProviderLabel] = useState(
+    PROVIDER_LABELS[process.env.NEXT_PUBLIC_AI_PROVIDER] || "Gemini AI"
+  );
   const [messages, setMessages] = useState([
     { role: "assistant", content: WELCOME },
   ]);
@@ -44,10 +55,7 @@ export default function AIChatbot() {
 
       if (data.ok && data.reply) {
         setMessages((prev) => [...prev, { role: "assistant", content: data.reply }]);
-        if (data.provider === "openai") setProviderLabel("ChatGPT AI");
-        else if (data.provider === "gemini") setProviderLabel("Gemini AI");
-        else if (data.provider === "local") setProviderLabel("Sachin.net AI");
-        else if (data.provider === "ollama") setProviderLabel("AI Assistant");
+        setProviderLabel(PROVIDER_LABELS[data.provider] || "AI Assistant");
       } else {
         setMessages((prev) => [
           ...prev,
