@@ -7,7 +7,7 @@ runConfig:
 
 env:
   - variable: NEXT_PUBLIC_FIREBASE_API_KEY
-    value: AIzaSyDcp312on3MERnF5raNmH7tL52lJJC0bwg
+    value: AIzaSyB11-p4UrbHncUk-TM59qfkiXex8cJHFKw
     availability:
       - BUILD
       - RUNTIME
@@ -28,6 +28,11 @@ env:
       - RUNTIME
   - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
     value: "747671065404"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: "1:747671065404:web:5a98f1363e959e834a8439"
     availability:
       - BUILD
       - RUNTIME
