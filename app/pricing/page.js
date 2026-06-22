@@ -6,7 +6,7 @@ import CtaSection from "@/components/home/CtaSection";
 export const metadata = {
   title: "Pricing — Sachin.net | Website & Software Packages",
   description:
-    "Transparent website and software development pricing — Basic Website ₹5,999, Business Website ₹14,999, E-Commerce ₹29,999 and custom software quotes.",
+    "Transparent website and software development pricing — Basic Website ₹5,999, Business Website ₹10,999, E-Commerce ₹24,999.",
 };
 
 export default function PricingPage() {
@@ -16,11 +16,9 @@ export default function PricingPage() {
         badge="Pricing Plans"
         title="Honest Pricing,"
         highlight="No Hidden Costs"
-        desc="Choose a ready-made package or contact us for a custom quote — 100% transparent pricing with free consultation."
+        desc="Choose a ready-made package or contact us for a custom quote — 100% transparent pricing."
       />
-      <div className="-mt-10">
-        <PricingSection />
-      </div>
+      <PricingSection first />
       <FaqSection />
       <CtaSection />
     </>

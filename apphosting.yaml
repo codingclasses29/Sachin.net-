@@ -1,0 +1,114 @@
+runConfig:
+  cpu: 1
+  memoryMiB: 512
+  minInstances: 0
+  maxInstances: 10
+  concurrency: 80
+
+env:
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: AIzaSyDcp312on3MERnF5raNmH7tL52lJJC0bwg
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: com-example-sachinnet-a7973.firebaseapp.com
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: com-example-sachinnet-a7973
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: com-example-sachinnet-a7973.firebasestorage.app
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    value: "747671065404"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_AI_PROVIDER
+    value: gemini
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: AI_PROVIDER
+    value: gemini
+    availability:
+      - RUNTIME
+  - variable: AI_MODEL
+    value: gemini-2.0-flash
+    availability:
+      - RUNTIME
+  - variable: AI_MAX_TOKENS
+    value: "1024"
+    availability:
+      - RUNTIME
+  - variable: AI_TEMPERATURE
+    value: "0.7"
+    availability:
+      - RUNTIME
+  - variable: AI_PROVIDER_ORDER
+    value: groq,openrouter,openai,ollama
+    availability:
+      - RUNTIME
+  - variable: GROQ_MODEL
+    value: llama-3.3-70b-versatile
+    availability:
+      - RUNTIME
+  - variable: GEMINI_MODEL
+    value: gemini-2.0-flash
+    availability:
+      - RUNTIME
+  - variable: OPENROUTER_MODEL
+    value: google/gemini-2.0-flash-exp:free
+    availability:
+      - RUNTIME
+  - variable: OPENAI_MODEL
+    value: gpt-4o-mini
+    availability:
+      - RUNTIME
+  - variable: SCHOOL_NAME
+    value: Sachin.net
+    availability:
+      - RUNTIME
+  - variable: OLLAMA_ENABLED
+    value: "false"
+    availability:
+      - RUNTIME
+  - variable: GEMINI_API_KEY
+    secret: GEMINI_API_KEY
+  - variable: GROQ_API_KEY
+    secret: GROQ_API_KEY
+  - variable: OPENROUTER_API_KEY
+    secret: OPENROUTER_API_KEY
+  - variable: OPENAI_API_KEY
+    secret: OPENAI_API_KEY
+  - variable: AI_API_KEY
+    secret: GEMINI_API_KEY
+  - variable: FIREBASE_SERVER_API_KEY
+    secret: FIREBASE_SERVER_API_KEY
+  - variable: NODEMAILER_EMAIL
+    secret: NODEMAILER_EMAIL
+  - variable: NODEMAILER_PASSWORD
+    secret: NODEMAILER_PASSWORD
+  - variable: CONTACT_ALERT_EMAIL
+    secret: CONTACT_ALERT_EMAIL
+  - variable: TWILIO_ACCOUNT_SID
+    secret: TWILIO_ACCOUNT_SID
+  - variable: TWILIO_AUTH_TOKEN
+    secret: TWILIO_AUTH_TOKEN
+  - variable: TWILIO_PHONE_NUMBER
+    secret: TWILIO_PHONE_NUMBER
+  - variable: ADMIN_ALERT_PHONE_NUMBER
+    secret: ADMIN_ALERT_PHONE_NUMBER
+  - variable: CLOUDINARY_CLOUD_NAME
+    secret: CLOUDINARY_CLOUD_NAME
+  - variable: CLOUDINARY_API_KEY
+    secret: CLOUDINARY_API_KEY
+  - variable: CLOUDINARY_API_SECRET
+    secret: CLOUDINARY_API_SECRET

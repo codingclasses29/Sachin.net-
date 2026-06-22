@@ -1,4 +1,5 @@
 import PageHeader from "@/components/PageHeader";
+import PageSection from "@/components/PageSection";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
@@ -13,38 +14,10 @@ export const metadata = {
 };
 
 const contactCards = [
-  {
-    icon: "whatsapp",
-    title: "WhatsApp",
-    value: site.phone,
-    href: `https://wa.me/${site.whatsapp}`,
-    color: "#22c55e",
-    note: "Fastest reply — usually within minutes",
-  },
-  {
-    icon: "phone",
-    title: "Call Now",
-    value: site.phone,
-    href: `tel:${site.phoneRaw}`,
-    color: "#3b82f6",
-    note: "Mon–Sat, 9 AM – 9 PM",
-  },
-  {
-    icon: "mail",
-    title: "Email",
-    value: site.email,
-    href: `mailto:${site.email}`,
-    color: "#f59e0b",
-    note: "Reply within 24 hours",
-  },
-  {
-    icon: "pin",
-    title: "Location",
-    value: site.address,
-    href: "#map",
-    color: "#ec4899",
-    note: "Serving clients all over India",
-  },
+  { icon: "whatsapp", title: "WhatsApp", value: site.phone, href: `https://wa.me/${site.whatsapp}`, color: "#22c55e", note: "Fastest reply" },
+  { icon: "phone", title: "Call Now", value: site.phone, href: `tel:${site.phoneRaw}`, color: "#3b82f6", note: "Mon–Sat, 9 AM – 9 PM" },
+  { icon: "mail", title: "Email", value: site.email, href: `mailto:${site.email}`, color: "#f59e0b", note: "Reply within 24 hours" },
+  { icon: "pin", title: "Location", value: site.address, href: "#map", color: "#ec4899", note: "Serving all India" },
 ];
 
 export default function ContactPage() {
@@ -54,59 +27,51 @@ export default function ContactPage() {
         badge="Contact Us"
         title="Let's Build Something"
         highlight="Great Together"
-        desc="Free consultation, free quote — बस एक message दूर। WhatsApp, call या form, जो आसान लगे।"
+        desc="Free consultation, free quote — WhatsApp, call ya form, jo aasan lage."
       />
 
-      <section className="py-10 sm:py-12 md:py-14">
-        <div className="container-x">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-            {contactCards.map((c, i) => (
-              <Reveal key={c.title} delay={i * 80}>
-                <a
-                  href={c.href}
-                  target={c.href.startsWith("http") ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  className="glass-card p-5 sm:p-6 block h-full text-center"
-                >
-                  <span
-                    className="inline-flex items-center justify-center w-12 h-12 rounded-full"
-                    style={{ background: `${c.color}1f`, color: c.color }}
-                  >
-                    <Icon name={c.icon} className="w-6 h-6" />
-                  </span>
-                  <h3 className="mt-4 font-semibold text-white">{c.title}</h3>
-                  <p className="mt-1 text-sm text-primary-light font-medium break-anywhere">{c.value}</p>
-                  <p className="mt-2 text-xs text-slate-500">{c.note}</p>
-                </a>
-              </Reveal>
-            ))}
-          </div>
-
-          <div className="mt-8 sm:mt-10 flex flex-col items-center text-center">
-            <p className="text-sm text-slate-400 mb-3">Follow us on social media</p>
-            <SocialLinks size="lg" />
-          </div>
-
-          <div className="mt-8 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
-            <Reveal>
-              <ContactForm />
+      <PageSection first>
+        <div className="grid-cards-4">
+          {contactCards.map((c, i) => (
+            <Reveal key={c.title} delay={i * 60}>
+              <a
+                href={c.href}
+                target={c.href.startsWith("http") ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                className="card card-p block h-full text-center no-hover"
+              >
+                <span className="icon-box icon-box-lg mx-auto" style={{ background: `${c.color}18`, color: c.color }}>
+                  <Icon name={c.icon} className="w-6 h-6" />
+                </span>
+                <h3 className="mt-4 heading-sm text-base">{c.title}</h3>
+                <p className="mt-1 text-sm text-primary-light font-medium break-anywhere">{c.value}</p>
+                <p className="mt-2 text-muted">{c.note}</p>
+              </a>
             </Reveal>
-
-            <Reveal delay={120}>
-              <div className="glass-card !transform-none overflow-hidden" id="map">
-                <iframe
-                  title="Sachin.net Location"
-                  src="https://www.google.com/maps?q=Bihar,+India&output=embed"
-                  className="w-full h-56 sm:h-72 md:h-96 lg:h-[480px] grayscale-[40%] contrast-[1.05] border-0"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  allowFullScreen
-                />
-              </div>
-            </Reveal>
-          </div>
+          ))}
         </div>
-      </section>
+
+        <div className="mt-10 flex flex-col items-center text-center">
+          <p className="text-body text-sm mb-3">Follow us on social media</p>
+          <SocialLinks size="lg" />
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+          <Reveal><ContactForm /></Reveal>
+          <Reveal delay={100}>
+            <div className="card card-static overflow-hidden" id="map">
+              <iframe
+                title="Sachin.net Location"
+                src="https://www.google.com/maps?q=Bihar,+India&output=embed"
+                className="w-full h-72 lg:h-[520px] grayscale-[35%] border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+          </Reveal>
+        </div>
+      </PageSection>
 
       <FaqSection />
     </>

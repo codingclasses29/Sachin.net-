@@ -1,0 +1,15 @@
+{
+  "apphosting": {
+    "backendId": "sachin-net",
+    "rootDir": ".",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log",
+      ".env.local",
+      "env-copy-paste.txt",
+      "netlify-env-import.env"
+    ]
+  }
+}

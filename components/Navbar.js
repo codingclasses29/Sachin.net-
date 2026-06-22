@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Icon from "./Icon";
+import ThemeToggle from "./ThemeToggle";
 import { navLinks, site } from "@/lib/data";
 
 export default function Navbar() {
@@ -29,10 +30,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={`site-header fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled || open
-          ? "bg-dark/90 backdrop-blur-xl border-b border-slate-700/40 shadow-lg shadow-black/20"
-          : "bg-dark/40 backdrop-blur-sm md:bg-transparent md:backdrop-blur-none"
+          ? "is-scrolled"
+          : ""
       }`}
     >
       <nav className="container-x flex items-center justify-between h-14 sm:h-16 lg:h-[4.5rem]">
@@ -62,6 +63,10 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+          <ThemeToggle />
+          <Link href="/ai-tools" className="hidden xl:inline-flex text-sm text-cyan-400 hover:text-cyan-300 font-medium">
+            AI Tools
+          </Link>
           <a
             href={`tel:${site.phoneRaw}`}
             className="hidden xl:flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors whitespace-nowrap"
@@ -86,7 +91,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="lg:hidden bg-dark-2/98 backdrop-blur-xl border-t border-slate-700/40 max-h-[calc(100dvh-3.5rem)] overflow-y-auto">
+        <div className="lg:hidden mobile-nav">
           <ul className="container-x py-4 space-y-1 pb-8">
             {navLinks.map((link) => (
               <li key={link.href}>

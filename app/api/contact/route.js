@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { sendContactEmail, sendAutoReplyEmail, isEmailConfigured } from "@/lib/email";
 import { sendAdminAlert } from "@/lib/whatsapp";
+import { connectDB, isDBConfigured } from "@/lib/mongodb";
+import Lead from "@/lib/models/Lead";
 
 export async function POST(request) {
   try {
@@ -21,6 +23,15 @@ export async function POST(request) {
       service: service?.trim() || "General Enquiry",
       message: message.trim(),
     };
+
+    if (isDBConfigured()) {
+      try {
+        await connectDB();
+        await Lead.create({ ...payload, source: "contact-form" });
+      } catch {
+        // non-blocking — email/whatsapp still sent
+      }
+    }
 
     const [emailResult, alertResult, autoReply] = await Promise.allSettled([
       sendContactEmail(payload),

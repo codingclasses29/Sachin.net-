@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "747671065404",
+    "project_id": "com-example-sachinnet-a7973",
+    "storage_bucket": "com-example-sachinnet-a7973.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747671065404:android:76f8140b3ecc80a64a8439",
+        "android_client_info": {
+          "package_name": "com.example.sachin_net"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcp312on3MERnF5raNmH7tL52lJJC0bwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

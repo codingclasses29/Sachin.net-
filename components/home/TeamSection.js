@@ -1,3 +1,4 @@
+import PageSection from "@/components/PageSection";
 import Reveal from "../Reveal";
 import SectionHeading from "../SectionHeading";
 import ExperienceCard from "../ExperienceCard";
@@ -12,9 +13,8 @@ function teamCardSpan(index) {
 
 export default function TeamSection() {
   return (
-    <section className="section-y">
-      <div className="container-x">
-        <SectionHeading
+    <PageSection>
+      <SectionHeading
           badge="Our Team"
           title="Expert"
           highlight="Developers"
@@ -26,7 +26,7 @@ export default function TeamSection() {
           {teamMembers.map((member, i) => (
             <Reveal key={member.name} delay={(i % 3) * 100} className={teamCardSpan(i)}>
               <div
-                className={`glass-card p-5 sm:p-6 h-full min-h-[420px] sm:min-h-[440px] text-center relative flex flex-col mx-auto max-w-[300px] ${
+                className={`card card-p h-full min-h-[420px] text-center relative flex flex-col mx-auto max-w-[300px] ${
                   member.isFounder
                     ? "!border-primary/50 !bg-primary/[0.06]"
                     : member.isCoFounder
@@ -103,7 +103,6 @@ export default function TeamSection() {
             )}
           </div>
         </div>
-      </div>
-    </section>
+    </PageSection>
   );
 }

@@ -1,4 +1,5 @@
 import PageHeader from "@/components/PageHeader";
+import PageSection from "@/components/PageSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import ProcessSection from "@/components/home/ProcessSection";
 import TechStackSection from "@/components/home/TechStackSection";
@@ -17,11 +18,9 @@ export default function ServicesPage() {
         badge="Our Services"
         title="Services That"
         highlight="Grow Your Business"
-        desc="From a simple business website to a complete ERP system — we build everything your business needs to succeed online."
+        desc="From a simple business website to a complete ERP system — we build everything your business needs."
       />
-      <div className="-mt-10">
-        <ServicesSection />
-      </div>
+      <ServicesSection first />
       <TechStackSection />
       <ProcessSection />
       <CtaSection />

@@ -10,6 +10,7 @@ const serviceOptions = [
   "E-Commerce Website",
   "ERP Software",
   "Mobile App Development",
+  "AI & Machine Learning",
   "UI/UX Design",
   "SEO Optimization",
   "Other",
@@ -75,32 +76,31 @@ export default function ContactForm() {
     }
   };
 
-  const inputClass =
-    "w-full rounded-xl bg-white/[0.04] border border-slate-700/70 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none focus:border-primary transition-colors";
-
   return (
-    <form onSubmit={handleSubmit} className="glass-card !transform-none p-5 sm:p-7 md:p-9 space-y-4 sm:space-y-5">
-      <h3 className="text-xl font-bold text-white">Get Your Free Quote</h3>
-      <p className="text-sm text-slate-400 -mt-3">
-        Form submit karein — Email + WhatsApp alert turant admin ko jayega.
-      </p>
+    <form onSubmit={handleSubmit} className="card card-static card-p-lg space-y-4 sm:space-y-5">
+      <div>
+        <h3 className="heading-sm">Get Your Free Quote</h3>
+        <p className="text-muted mt-1">
+          Form submit karein — Email + WhatsApp alert turant admin ko jayega.
+        </p>
+      </div>
 
-      <div className="grid sm:grid-cols-2 gap-5">
+      <div className="grid sm:grid-cols-2 gap-4">
         <input
           required
           placeholder="Your Name *"
           value={form.name}
           onChange={update("name")}
-          className={inputClass}
+          className="field"
           disabled={loading}
         />
         <input
           required
           type="tel"
-          placeholder="Phone / WhatsApp Number *"
+          placeholder="Phone / WhatsApp *"
           value={form.phone}
           onChange={update("phone")}
-          className={inputClass}
+          className="field"
           disabled={loading}
         />
       </div>
@@ -110,20 +110,13 @@ export default function ContactForm() {
         placeholder="Email Address"
         value={form.email}
         onChange={update("email")}
-        className={inputClass}
+        className="field"
         disabled={loading}
       />
 
-      <select
-        value={form.service}
-        onChange={update("service")}
-        className={inputClass}
-        disabled={loading}
-      >
+      <select value={form.service} onChange={update("service")} className="field" disabled={loading}>
         {serviceOptions.map((s) => (
-          <option key={s} value={s} className="bg-dark-2">
-            {s}
-          </option>
+          <option key={s} value={s}>{s}</option>
         ))}
       </select>
 
@@ -133,7 +126,7 @@ export default function ContactForm() {
         placeholder="Tell us about your project... *"
         value={form.message}
         onChange={update("message")}
-        className={inputClass}
+        className="field resize-none"
         disabled={loading}
       />
 
@@ -142,22 +135,13 @@ export default function ContactForm() {
         {!loading && <Icon name="arrow" className="w-4 h-4" />}
       </button>
 
-      <button
-        type="button"
-        onClick={openWhatsApp}
-        className="btn-whatsapp w-full"
-        disabled={loading}
-      >
+      <button type="button" onClick={openWhatsApp} className="btn-whatsapp w-full" disabled={loading}>
         <Icon name="whatsapp" className="w-4 h-4" />
         WhatsApp Direct
       </button>
 
       {status.text && (
-        <p
-          className={`text-sm text-center ${
-            status.type === "success" ? "text-accent" : "text-amber-400"
-          }`}
-        >
+        <p className={`text-sm text-center ${status.type === "success" ? "text-accent-green" : "text-amber-400"}`}>
           {status.text}
         </p>
       )}
