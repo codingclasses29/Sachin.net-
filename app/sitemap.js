@@ -1,14 +1,37 @@
+import { blogPosts } from "@/lib/data";
+
 export default function sitemap() {
   const base = "https://sachin-net.netlify.app";
   const routes = [
-    "", "/services", "/ai-services", "/ai-tools", "/portfolio", "/pricing",
-    "/about", "/blog", "/contact", "/careers", "/privacy", "/terms",
+    { path: "", priority: 1, changeFrequency: "weekly" },
+    { path: "/website-development", priority: 0.95, changeFrequency: "weekly" },
+    { path: "/services", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/contact", priority: 0.9, changeFrequency: "monthly" },
+    { path: "/ai-services", priority: 0.85, changeFrequency: "monthly" },
+    { path: "/ai-tools", priority: 0.85, changeFrequency: "monthly" },
+    { path: "/portfolio", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/pricing", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/about", priority: 0.75, changeFrequency: "monthly" },
+    { path: "/blog", priority: 0.75, changeFrequency: "weekly" },
+    { path: "/careers", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
+    { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
   ];
 
-  return routes.map((route) => ({
-    url: `${base}${route}`,
+  const blogRoutes = blogPosts.map((p) => ({
+    url: `${base}/blog/${p.slug}`,
     lastModified: new Date(),
-    changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.8,
+    changeFrequency: "monthly",
+    priority: 0.7,
   }));
+
+  return [
+    ...routes.map(({ path, priority, changeFrequency }) => ({
+      url: `${base}${path}`,
+      lastModified: new Date(),
+      changeFrequency,
+      priority,
+    })),
+    ...blogRoutes,
+  ];
 }

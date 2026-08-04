@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Icon from "./Icon";
 import { site } from "@/lib/data";
+import { trackLead } from "@/lib/analytics";
 
 const serviceOptions = [
   "Website Development",
@@ -39,6 +40,7 @@ export default function ContactForm() {
         `Message: ${form.message}`
     );
     window.open(`https://wa.me/${site.whatsapp}?text=${text}`, "_blank");
+    trackLead("whatsapp_form");
   };
 
   const handleSubmit = async (e) => {
@@ -55,6 +57,7 @@ export default function ContactForm() {
       const data = await res.json();
 
       if (data.ok) {
+        trackLead("contact_form");
         setStatus({
           type: "success",
           text: `✓ ${data.message || "Enquiry sent! Hum jald contact karenge."}`,

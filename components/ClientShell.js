@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import ScrollProgress from "./ScrollProgress";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
@@ -18,6 +19,7 @@ export default function ClientShell({ children }) {
 
   return (
     <>
+      <ScrollProgress />
       <Navbar />
       <main className="flex-1 relative z-10">{children}</main>
       <Footer />

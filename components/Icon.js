@@ -50,6 +50,12 @@ const paths = {
       <path d="m21 21-4.35-4.35M8 11h6M11 8v6" />
     </>
   ),
+  search: (
+    <>
+      <circle cx="11" cy="11" r="8" />
+      <path d="m21 21-4.35-4.35" />
+    </>
+  ),
   server: (
     <>
       <rect x="2" y="3" width="20" height="7" rx="2" />

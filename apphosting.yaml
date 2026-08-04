@@ -7,32 +7,47 @@ runConfig:
 
 env:
   - variable: NEXT_PUBLIC_FIREBASE_API_KEY
-    value: AIzaSyB11-p4UrbHncUk-TM59qfkiXex8cJHFKw
+    value: AIzaSyA1zvsiIXOmhYjhcFV1lL31yHWPmex6tP4
     availability:
       - BUILD
       - RUNTIME
   - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
-    value: com-example-sachinnet-a7973.firebaseapp.com
+    value: photofolio-41cbf.firebaseapp.com
     availability:
       - BUILD
       - RUNTIME
   - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
-    value: com-example-sachinnet-a7973
+    value: photofolio-41cbf
     availability:
       - BUILD
       - RUNTIME
   - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
-    value: com-example-sachinnet-a7973.firebasestorage.app
+    value: photofolio-41cbf.appspot.com
     availability:
       - BUILD
       - RUNTIME
   - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
-    value: "747671065404"
+    value: "409649771008"
     availability:
       - BUILD
       - RUNTIME
   - variable: NEXT_PUBLIC_FIREBASE_APP_ID
-    value: "1:747671065404:web:5a98f1363e959e834a8439"
+    value: "1:409649771008:web:e75a7725879cad8fca5ee5"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+    value: G-C5K1Q8K417
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_GA_MEASUREMENT_ID
+    value: G-C5K1Q8K417
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_GOOGLE_ADS_ID
+    value: AW-18371014921
     availability:
       - BUILD
       - RUNTIME

@@ -38,7 +38,7 @@ const envMap = Object.fromEntries(
 
 console.log("Setting Firebase App Hosting secrets...\n");
 console.log("Run: npx -y firebase-tools@latest login");
-console.log("Run: npx -y firebase-tools@latest use com-example-sachinnet-a7973\n");
+console.log("Run: npx -y firebase-tools@latest use photofolio-41cbf\n");
 
 for (const key of secretKeys) {
   const value = envMap[key];

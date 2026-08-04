@@ -8,7 +8,7 @@ import { services } from "@/lib/data";
 export default function ServicesSection({ limit, first = false }) {
   const list = limit ? services.slice(0, limit) : services;
   return (
-    <PageSection id="services" first={first}>
+    <PageSection id="services" first={first} className="section-india-saffron">
       <SectionHeading
         badge="Our Services"
         title="Complete"
@@ -19,7 +19,7 @@ export default function ServicesSection({ limit, first = false }) {
       <div className="mt-10 sm:mt-12 grid-cards-3">
         {list.map((s, i) => (
           <Reveal key={s.title} delay={(i % 3) * 80}>
-            <div className="card card-p h-full group">
+            <div className="card card-p h-full group card-light">
               <span className="icon-box" style={{ background: `${s.color}18`, color: s.color }}>
                 <Icon name={s.icon} className="w-7 h-7" />
               </span>

@@ -3,6 +3,9 @@ import "./globals.css";
 import Providers from "@/components/Providers";
 import PageLoader from "@/components/PageLoader";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import AuroraLayer from "@/components/AuroraLayer";
+import MarketingPixels from "@/components/MarketingPixels";
+import SeoSchema from "@/components/SeoSchema";
 import ClientShell from "@/components/ClientShell";
 import FirebaseInit from "@/components/FirebaseInit";
 
@@ -24,39 +27,49 @@ const manrope = Manrope({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://sachin-net.netlify.app"),
   title: {
-    default: "Sachin.net — Premium Website, Software & AI/ML Development",
+    default: "Sachin.net — Website Banwane Wala | Software & AI Company India",
     template: "%s | Sachin.net",
   },
   description:
-    "Transforming Ideas Into Powerful Digital Solutions. Websites, ERP, School Management, E-Commerce, Mobile Apps, AI Chatbots & Machine Learning — Sachin.net Bihar, India.",
+    "Website banwani hai? Sachin.net — India ka best website development company. Business website, School ERP, E-Commerce, Mobile App, AI Chatbot. Bihar se poore India. Free quote: +91 9931306292",
   keywords: [
-    "website development",
+    "website banwane wala",
+    "website banwani hai",
+    "website development company india",
+    "website developer bihar",
     "school management system",
-    "e-commerce website",
-    "ERP software",
+    "e-commerce website developer",
+    "ERP software india",
     "AI chatbot development",
-    "machine learning solutions",
     "software company india",
     "sachin.net",
+    "website banane wala near me",
+    "cheap website development",
+    "professional website design india",
   ],
   verification: {
     google: "DFle5qV2FDhcajUMAZcQ270aljqh1lRPGYuMiH8mFWI",
   },
+  alternates: {
+    canonical: "https://sachin-net.netlify.app",
+  },
   openGraph: {
-    title: "Sachin.net — Premium Software & AI Company",
-    description: "Transforming Ideas Into Powerful Digital Solutions",
+    title: "Sachin.net — Website Banwane Wala India",
+    description: "Professional Website, School ERP, E-Commerce & AI Solutions. 100+ Clients. Free Quote.",
     url: "https://sachin-net.netlify.app",
     siteName: "Sachin.net",
     locale: "en_IN",
     type: "website",
+    images: [{ url: "/images/hero-bg.png", width: 1200, height: 630, alt: "Sachin.net Website Development" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sachin.net",
-    description: "Premium Website, Software & AI/ML Development",
+    title: "Sachin.net — Website Development India",
+    description: "Website banwani hai? Sachin.net se free quote lein.",
   },
-  robots: { index: true, follow: true },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 };
 
 export const viewport = {
@@ -72,32 +85,15 @@ export default function RootLayout({ children }) {
       className={`${poppins.variable} ${inter.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col safe-bottom bg-mesh relative">
+        <MarketingPixels />
+        <SeoSchema />
         <Providers>
+          <AuroraLayer />
           <AnimatedBackground />
           <PageLoader />
           <FirebaseInit />
           <ClientShell>{children}</ClientShell>
         </Providers>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Sachin.net",
-              url: "https://sachin-net.netlify.app",
-              logo: "https://sachin-net.netlify.app/team/sachin-kumar.png",
-              description: "Premium Website, Software & AI/ML Development Company",
-              address: { "@type": "PostalAddress", addressRegion: "Bihar", addressCountry: "IN" },
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+91-9931306292",
-                contactType: "customer service",
-                email: "codingclasses29@gmail.com",
-              },
-            }),
-          }}
-        />
       </body>
     </html>
   );

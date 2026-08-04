@@ -6,7 +6,7 @@ import CtaSection from "@/components/home/CtaSection";
 export const metadata = {
   title: "Pricing — Sachin.net | Website & Software Packages",
   description:
-    "Transparent website and software development pricing — Basic Website ₹5,999, Business Website ₹10,999, E-Commerce ₹24,999.",
+    "Website and software development packages — Basic, Business, E-Commerce and Custom Software. Contact Sachin.net for a free quote.",
 };
 
 export default function PricingPage() {
