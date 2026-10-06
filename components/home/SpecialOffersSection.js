@@ -150,8 +150,24 @@ export default function SpecialOffersSection() {
                 </div>
               </div>
 
+              {/* Live Demo Proof Strip */}
+              <div className="mt-3 p-2.5 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-between text-xs">
+                <span className="text-slate-300 flex items-center gap-1.5 font-medium">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>लाइव वेबसाइट डेमो देखें:</span>
+                </span>
+                <a
+                  href="https://medicarehospitl.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-amber-300 hover:text-white hover:underline flex items-center gap-1"
+                >
+                  <span>Medicare Hospital ↗</span>
+                </a>
+              </div>
+
               {/* Bug Fixing Sub-Banner */}
-              <div className="mt-4 p-3.5 rounded-xl bg-red-950/40 border border-red-500/30 flex items-center justify-between">
+              <div className="mt-3 p-3.5 rounded-xl bg-red-950/40 border border-red-500/30 flex items-center justify-between">
                 <div>
                   <div className="text-xs font-bold text-red-300 uppercase">
                     OLD WEBSITE BUG FIXING
@@ -307,6 +323,44 @@ export default function SpecialOffersSection() {
                       <div className="text-[11px] text-slate-400">क्यूआर कोड / यूपीआई द्वारा डायरेक्ट बैंक खाता कलेक्शन</div>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              {/* Live NGO Client Portals Proof */}
+              <div className="my-3 p-3 rounded-xl bg-red-950/40 border border-red-500/30">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[11px] font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span>हमारे लाइव NGO पोर्टल्स देखें (Click to Test):</span>
+                  </span>
+                  <span className="text-[10px] text-emerald-400 font-bold">100% Live</span>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-2">
+                  <a
+                    href="https://gramvikasfoundation.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-black/40 hover:bg-black/60 border border-red-500/30 hover:border-amber-400/60 transition-all text-left group"
+                  >
+                    <div className="text-xs font-bold text-white group-hover:text-amber-300 transition-colors flex items-center justify-between">
+                      <span className="truncate">Gram Vikas Foundation</span>
+                      <span className="text-[10px] text-emerald-400">↗</span>
+                    </div>
+                    <div className="text-[10px] text-slate-400">80G &amp; ID Card Live Portal</div>
+                  </a>
+
+                  <a
+                    href="https://rurallysmile-org.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-black/40 hover:bg-black/60 border border-red-500/30 hover:border-amber-400/60 transition-all text-left group"
+                  >
+                    <div className="text-xs font-bold text-white group-hover:text-amber-300 transition-colors flex items-center justify-between">
+                      <span className="truncate">Rurally Smile Org</span>
+                      <span className="text-[10px] text-emerald-400">↗</span>
+                    </div>
+                    <div className="text-[10px] text-slate-400">Rural Welfare NGO Live</div>
+                  </a>
                 </div>
               </div>
 

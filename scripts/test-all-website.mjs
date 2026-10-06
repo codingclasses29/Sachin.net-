@@ -82,6 +82,12 @@ async function testData() {
   assert(dataContent.includes("₹6,999"), "NGO package price is ₹6,999");
   assert(dataContent.includes("Old Website Bug Fixing"), "Bug fixing service exists");
   assert(dataContent.includes("₹999/-"), "Bug fix price is ₹999/-");
+
+  // Live client demo links
+  assert(dataContent.includes("https://medicarehospitl.netlify.app/"), "Live Demo 1 exists: medicarehospitl.netlify.app");
+  assert(dataContent.includes("https://gramvikasfoundation.netlify.app/"), "Live Demo 2 exists: gramvikasfoundation.netlify.app");
+  assert(dataContent.includes("https://medicare-hospitl-1.netlify.app/"), "Live Demo 3 exists: medicare-hospitl-1.netlify.app");
+  assert(dataContent.includes("https://rurallysmile-org.vercel.app/"), "Live Demo 4 exists: rurallysmile-org.vercel.app");
 }
 testData();
 
@@ -152,7 +158,18 @@ if (fs.existsSync(bannerSliderPath)) {
   assert(bannerSliderContent.includes("website-development.png"), "BannerSlider includes website-development.png");
   assert(bannerSliderContent.includes("hosting-servers.png"), "BannerSlider includes hosting-servers.png");
   assert(bannerSliderContent.includes("school-management.png"), "BannerSlider includes school-management.png");
+  assert(bannerSliderContent.includes("https://medicarehospitl.netlify.app/"), "BannerSlider has live hospital demo URL");
 }
+
+const portfolioPath = path.join(rootDir, "components", "home", "PortfolioSection.js");
+const portfolioContent = fs.readFileSync(portfolioPath, "utf8");
+assert(portfolioContent.includes("liveDemos"), "PortfolioSection.js renders liveDemos list");
+assert(portfolioContent.includes("Live Website ↗"), "PortfolioSection.js has Live Website button");
+
+const portfolioPagePath = path.join(rootDir, "app", "portfolio", "page.js");
+const portfolioPageContent = fs.readFileSync(portfolioPagePath, "utf8");
+assert(portfolioPageContent.includes("liveDemos"), "app/portfolio/page.js renders liveDemos");
+assert(portfolioPageContent.includes("Live Client Websites"), "app/portfolio/page.js has Live Client section");
 
 const pageHomeContent = fs.readFileSync(path.join(rootDir, "app", "page.js"), "utf8");
 assert(pageHomeContent.includes("<BannerSlider"), "app/page.js renders <BannerSlider />");
@@ -170,6 +187,8 @@ if (offersExists) {
   assert(offersContent.includes("₹6,999"), "Offer 2 has '₹6,999'");
   assert(offersContent.includes("₹999/-"), "Bug fix banner has '₹999/-'");
   assert(offersContent.includes("9931306292"), "WhatsApp phone number is present in CTAs");
+  assert(offersContent.includes("https://gramvikasfoundation.netlify.app/"), "SpecialOffers has Gram Vikas NGO live link");
+  assert(offersContent.includes("https://rurallysmile-org.vercel.app/"), "SpecialOffers has Rurally Smile Org live link");
 }
 
 // 6. Verify API Endpoints

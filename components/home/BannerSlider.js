@@ -19,6 +19,8 @@ export const bannerSlides = [
     whatsappMsg: "Namaste Sachin.net! Mujhe Hospital Management System ka live demo aur quotation chahiye.",
     features: ["OPD / IPD Portal", "Doctor & Patient System", "Lab & Pharmacy", "Billing & Analytics"],
     link: "/contact?service=hospital",
+    liveDemo: "https://medicarehospitl.netlify.app/",
+    liveDemoLabel: "Live Hospital Demo ↗",
     badge: "Smart | Simple | Secure",
   },
   {
@@ -47,6 +49,8 @@ export const bannerSlides = [
     whatsappMsg: "Namaste Sachin.net! Mujhe nayi website banwani hai. Free quote & demo consultation chahiye.",
     features: ["बिज़नेस व कॉर्पोरेट वेबसाइट", "ई-कॉमर्स स्टोर (UPI & Payment)", "NGO व ट्रस्ट पोर्टल", "होटल, रेस्टोरेंट & स्कूल वेबसाइट"],
     link: "/website-development",
+    liveDemo: "https://gramvikasfoundation.netlify.app/",
+    liveDemoLabel: "Live NGO Demo ↗",
     badge: "Modern | Fast | Mobile SEO Ready",
   },
   {
@@ -321,7 +325,19 @@ export default function BannerSlider() {
             </div>
 
             {/* Direct CTA Buttons */}
-            <div className="flex items-center gap-2 sm:gap-3 w-full md:w-auto shrink-0">
+            <div className="flex items-center gap-2 sm:gap-3 w-full md:w-auto shrink-0 flex-wrap">
+              {activeSlide.liveDemo && (
+                <a
+                  href={activeSlide.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-teal !py-2 !px-3 sm:!px-4 text-xs sm:text-sm flex items-center gap-1.5 whitespace-nowrap shadow-md shadow-teal-500/20 font-bold"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse" />
+                  <span>{activeSlide.liveDemoLabel || "Live Demo ↗"}</span>
+                </a>
+              )}
+
               <a
                 href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(activeSlide.whatsappMsg)}`}
                 target="_blank"
