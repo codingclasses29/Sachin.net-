@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Icon from "./Icon";
 import SocialLinks from "./SocialLinks";
 import { site, services } from "@/lib/data";
@@ -25,9 +26,15 @@ export default function Footer() {
     <footer className="page-section-alt border-t-0">
       <div className="container-x py-10 sm:py-12 grid gap-8 sm:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2 lg:col-span-1">
-          <Link href="/" className="flex items-center gap-2 heading-sm">
-            <Icon name="code" className="w-6 h-6 text-primary-light" />
-            Sachin<span className="text-primary-light">.net</span>
+          <Link href="/" className="inline-flex items-center gap-2 mb-2">
+            <Image
+              src="/logo.png"
+              alt="Sachin.net"
+              width={140}
+              height={44}
+              className="h-10 w-auto object-contain"
+              style={{ maxHeight: "40px", width: "auto" }}
+            />
           </Link>
           <p className="mt-3 text-body text-sm max-w-sm">
             Premium software development company — websites, ERP, AI &amp; ML solutions.

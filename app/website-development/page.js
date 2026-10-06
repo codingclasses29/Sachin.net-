@@ -23,9 +23,9 @@ export const metadata = {
   openGraph: {
     title: "Website Banwane Wala — Sachin.net India",
     description: "Professional website, ERP, e-commerce & AI solutions. 100+ clients. Free quote.",
-    url: "https://sachin-net.netlify.app/website-development",
+    url: "https://www.sachin-net.xyz/website-development",
   },
-  alternates: { canonical: "https://sachin-net.netlify.app/website-development" },
+  alternates: { canonical: "https://www.sachin-net.xyz/website-development" },
 };
 
 const highlights = [

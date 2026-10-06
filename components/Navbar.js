@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Icon from "./Icon";
 import ThemeToggle from "./ThemeToggle";
@@ -81,12 +82,17 @@ export default function Navbar() {
       <nav className="container-x flex items-center justify-between h-14 sm:h-16 lg:h-[4.5rem] gap-4">
         <Link
           href="/"
-          className="nav-brand flex items-center gap-1.5 sm:gap-2 font-bold text-lg sm:text-xl text-white shrink-0 transition-colors"
+          className="nav-brand flex items-center shrink-0 h-10 sm:h-12 max-h-12 overflow-hidden py-1 transition-opacity hover:opacity-90"
         >
-          <span className="text-primary-light">
-            <Icon name="code" className="w-6 h-6 sm:w-7 sm:h-7" />
-          </span>
-          Sachin<span className="text-primary-light">.net</span>
+          <Image
+            src="/logo.png"
+            alt="Sachin.net Online Services"
+            width={120}
+            height={42}
+            priority
+            className="h-9 sm:h-10 md:h-11 w-auto max-h-[42px] object-contain shrink-0"
+            style={{ maxHeight: "42px", width: "auto", height: "auto" }}
+          />
         </Link>
 
         <ul className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium">

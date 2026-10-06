@@ -1,6 +1,6 @@
 import { site, faqs, services } from "@/lib/data";
 
-const BASE = "https://sachin-net.netlify.app";
+const BASE = "https://www.sachin-net.xyz";
 
 export default function SeoSchema() {
   const localBusiness = {
@@ -10,7 +10,7 @@ export default function SeoSchema() {
     name: "Sachin.net",
     alternateName: ["Sachin net", "Sachin.net Website Development", "Website Banwane Wala Bihar"],
     url: BASE,
-    logo: `${BASE}/team/sachin-kumar.png`,
+    logo: `${BASE}/logo.png`,
     image: `${BASE}/images/hero-bg.png`,
     description:
       "Sachin.net — India ka trusted website development company. Business website, school ERP, e-commerce, mobile app aur AI solutions. Bihar, India.",
@@ -31,6 +31,9 @@ export default function SeoSchema() {
       closes: "23:59",
     },
     sameAs: [
+      "https://www.youtube.com/@BR_Siwan29",
+      "https://www.instagram.com/___sachinkushwaha",
+      "https://www.facebook.com/sachinkushwaha",
       "https://github.com/codingclasses29/Sachin.net-.git",
       "https://whatsapp.com/channel/0029VbBhyVHKAwEohciKUo1R",
     ],

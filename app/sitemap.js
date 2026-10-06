@@ -1,7 +1,7 @@
 import { blogPosts } from "@/lib/data";
 
 export default function sitemap() {
-  const base = "https://sachin-net.netlify.app";
+  const base = "https://www.sachin-net.xyz";
   const routes = [
     { path: "", priority: 1, changeFrequency: "weekly" },
     { path: "/website-development", priority: 0.95, changeFrequency: "weekly" },

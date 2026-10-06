@@ -1,4 +1,5 @@
 import { Poppins, Inter, Manrope } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import PageLoader from "@/components/PageLoader";
@@ -27,7 +28,7 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://sachin-net.netlify.app"),
+  metadataBase: new URL("https://www.sachin-net.xyz"),
   title: {
     default: "Sachin.net — Website Banwane Wala | Software & AI Company India",
     template: "%s | Sachin.net",
@@ -45,20 +46,31 @@ export const metadata = {
     "AI chatbot development",
     "software company india",
     "sachin.net",
+    "sachin-net.xyz",
     "website banane wala near me",
     "cheap website development",
     "professional website design india",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "64x64" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   verification: {
     google: "DFle5qV2FDhcajUMAZcQ270aljqh1lRPGYuMiH8mFWI",
   },
   alternates: {
-    canonical: "https://sachin-net.netlify.app",
+    canonical: "https://www.sachin-net.xyz",
   },
   openGraph: {
     title: "Sachin.net — Website Banwane Wala India",
     description: "Professional Website, School ERP, E-Commerce & AI Solutions. 100+ Clients. Free Quote.",
-    url: "https://sachin-net.netlify.app",
+    url: "https://www.sachin-net.xyz",
     siteName: "Sachin.net",
     locale: "en_IN",
     type: "website",
@@ -85,6 +97,12 @@ export default function RootLayout({ children }) {
       className={`${poppins.variable} ${inter.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col safe-bottom bg-mesh relative">
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3192206378729297"
+          strategy="beforeInteractive"
+          crossOrigin="anonymous"
+        />
         <MarketingPixels />
         <SeoSchema />
         <Providers>

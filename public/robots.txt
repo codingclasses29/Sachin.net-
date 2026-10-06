@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/admin/
 
-Sitemap: https://sachin-net.netlify.app/sitemap.xml
+Sitemap: https://www.sachin-net.xyz/sitemap.xml
