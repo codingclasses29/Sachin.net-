@@ -20,9 +20,9 @@ import NewsletterSection from "@/components/home/NewsletterSection";
 import CtaSection from "@/components/home/CtaSection";
 
 export const metadata = {
-  title: "Sachin.net | Best Website Banwane Wala, School ERP & Custom Software Developer in India",
+  title: "Website Development Company in Bihar | Sachin.net — Siwan, Patna & Bharat",
   description:
-    "Professional website development, School ERP software, E-commerce, mobile apps and AI solutions by Sachin Kushwaha. Fast delivery, affordable pricing, 24x7 IST support.",
+    "Top Website Development Company in Bihar & Siwan. Sachin.net offers custom business websites, School ERP, E-Commerce stores, Mobile Apps & AI solutions. Free quote: +91 9931306292",
 };
 
 export default function Home() {
@@ -37,57 +37,56 @@ export default function Home() {
       {/* 3. Live Ticker: Fast Delivery · Secure Code · 24x7 Support · AI Powered */}
       <LiveTicker />
 
-      {/* 3. Empowering Your Business for Growth: 4 Core Service Cards */}
+      {/* 4. Empowering Your Business for Growth: 4 Core Service Cards */}
       <EmpowerSection />
 
-      {/* 4. Interactive Services Hub: Tabs for Websites, School ERP, AI & ML, E-Commerce */}
+      {/* 5. Interactive Services Hub: Tabs for Websites, School ERP, AI & ML, E-Commerce */}
       <ServiceTabsSection />
 
-      {/* 5. Proudly Made in India: States Served, Live IST Clock & Impact Stats */}
+      {/* 6. Proudly Made in India: States Served, Live IST Clock & Impact Stats */}
       <IndiaProudSection />
 
-      {/* 6. Featured Projects / Portfolio: EduSmart School, ShopKart, MedCare */}
+      {/* 7. Featured Projects / Portfolio: EduSmart School, ShopKart, MedCare */}
       <PortfolioSection limit={3} />
 
-      {/* 7. Comprehensive Digital Solutions: 6 Full Service Cards */}
+      {/* 8. Comprehensive Digital Solutions: 6 Full Service Cards */}
       <ServicesSection limit={6} />
 
-      {/* 8. Future-Ready AI Solutions: Chatbots, Machine Learning, Computer Vision */}
+      {/* 9. Future-Ready AI Solutions: Chatbots, Machine Learning, Computer Vision */}
       <AISection />
 
-      {/* 9. About Sachin Kushwaha: Founder, Full Stack Developer, IITM Pravartak */}
+      {/* 10. About Sachin Kushwaha: Founder, Full Stack Developer, IITM Pravartak */}
       <AboutSection />
 
-      {/* 10. Meet the Developers: Sachin Kumar, Sanjeev Kumar & Engineering Team */}
+      {/* 11. Meet the Developers: Sachin Kumar, Sanjeev Kumar & Engineering Team */}
       <TeamSection />
 
-      {/* 11. Why Choose Sachin.net: Fast Delivery, Clean Code, Affordable Pricing */}
+      {/* 12. Why Choose Sachin.net: Fast Delivery, Clean Code, Affordable Pricing */}
       <WhyChooseUsSection />
 
-      {/* 12. Technologies We Master: Next.js, React, Node.js, Python, MongoDB */}
+      {/* 13. Technologies We Master: Next.js, React, Node.js, Python, MongoDB */}
       <TechStackSection />
 
-      {/* 13. Transparent Pricing Plans: Starter, Business Pro, School ERP, Enterprise */}
+      {/* 14. Transparent Pricing Plans: Starter, Business Pro, School ERP, Enterprise */}
       <PricingSection />
 
-      {/* 14. Client Testimonials: Real Client Reviews Across India */}
+      {/* 15. Client Testimonials: Real Client Reviews Across India */}
       <TestimonialsSection />
 
-      {/* 15. How We Work: 6-Step Structured Project Delivery Process */}
+      {/* 16. How We Work: 6-Step Structured Project Delivery Process */}
       <ProcessSection />
 
-      {/* 16. Latest Insights & Tech Guides: Blog Articles */}
+      {/* 17. Latest Insights & Tech Guides: Blog Articles */}
       <BlogSection />
 
-      {/* 17. Frequently Asked Questions: Delivery Time, Costs, Mobile Responsive, Support */}
+      {/* 18. Frequently Asked Questions: Delivery Time, Costs, Mobile Responsive, Support */}
       <FaqSection />
 
-      {/* 18. Newsletter Subscription */}
+      {/* 19. Newsletter Subscription */}
       <NewsletterSection />
 
-      {/* 19. Final Conversion CTA Banner: Talk to Sachin Kushwaha */}
+      {/* 20. Final Conversion CTA Banner: Talk to Sachin Kushwaha */}
       <CtaSection />
     </>
   );
 }
-

@@ -97,6 +97,12 @@ const corePages = [
   "app/about/page.js",
   "app/careers/page.js",
   "app/website-development/page.js",
+  "app/website-development-bihar/page.js",
+  "app/website-development-siwan/page.js",
+  "app/website-development-patna/page.js",
+  "app/school-erp-bihar/page.js",
+  "app/ecommerce-development-bihar/page.js",
+  "app/mobile-app-development/page.js",
   "app/ai-services/page.js",
   "app/ai-tools/page.js",
   "app/blog/page.js",
@@ -120,9 +126,19 @@ assert(navbarContent.includes("maxHeight: \"42px\""), "Navbar logo has strict 42
 const layoutContent = fs.readFileSync(path.join(rootDir, "app", "layout.js"), "utf8");
 assert(layoutContent.includes("https://www.sachin-net.xyz"), "layout.js metadataBase is https://www.sachin-net.xyz");
 assert(layoutContent.includes("favicon.ico"), "layout.js metadata contains favicon.ico");
+assert(layoutContent.includes("Website Development Company in Bihar"), "layout.js title targets 'Website Development Company in Bihar'");
+
+const schemaContent = fs.readFileSync(path.join(rootDir, "components", "SeoSchema.js"), "utf8");
+assert(schemaContent.includes("LocalBusiness"), "SeoSchema.js has LocalBusiness schema");
+assert(schemaContent.includes("https://www.sachin-net.xyz"), "SeoSchema.js uses https://www.sachin-net.xyz");
+
+const sitemapContent = fs.readFileSync(path.join(rootDir, "app", "sitemap.js"), "utf8");
+assert(sitemapContent.includes("/website-development-bihar"), "sitemap.js includes /website-development-bihar");
+assert(sitemapContent.includes("/website-development-siwan"), "sitemap.js includes /website-development-siwan");
 
 const footerContent = fs.readFileSync(path.join(rootDir, "components", "Footer.js"), "utf8");
 assert(footerContent.includes('src="/logo.png"'), "Footer includes /logo.png");
+assert(footerContent.includes("Website Development Bihar"), "Footer has Bihar landing page link");
 assert(footerContent.includes("codingclasses29@gmail.com") || footerContent.includes("site.email"), "Footer has email reference");
 assert(footerContent.includes("site.phone"), "Footer has phone reference");
 

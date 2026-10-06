@@ -6,14 +6,24 @@ import { site, services } from "@/lib/data";
 
 const quickLinks = [
   { label: "Home", href: "/" },
+  { label: "Live Solutions Showcase", href: "/#banner-showcase" },
   { label: "Services", href: "/services" },
-  { label: "AI & ML", href: "/ai-services" },
-  { label: "AI Tools", href: "/ai-tools" },
+  { label: "Website Banwane Wala", href: "/website-development" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "About Us", href: "/about" },
-  { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/contact" },
+  { label: "Pricing Plans", href: "/pricing" },
+  { label: "AI & ML Solutions", href: "/ai-services" },
+  { label: "AI Tools", href: "/ai-tools" },
+  { label: "About Sachin Kushwaha", href: "/about" },
+  { label: "Contact Us", href: "/contact" },
+];
+
+const biharLocations = [
+  { label: "Website Development Bihar", href: "/website-development-bihar" },
+  { label: "Website Development Siwan", href: "/website-development-siwan" },
+  { label: "Website Development Patna", href: "/website-development-patna" },
+  { label: "Smart School ERP Bihar", href: "/school-erp-bihar" },
+  { label: "E-Commerce Development Bihar", href: "/ecommerce-development-bihar" },
+  { label: "Mobile App Development", href: "/mobile-app-development" },
 ];
 
 const legalLinks = [
@@ -25,19 +35,23 @@ export default function Footer() {
   return (
     <footer className="page-section-alt border-t-0">
       <div className="container-x py-10 sm:py-12 grid gap-8 sm:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Brand Column */}
         <div className="sm:col-span-2 lg:col-span-1">
           <Link href="/" className="inline-flex items-center gap-2 mb-2">
             <Image
               src="/logo.png"
-              alt="Sachin.net"
+              alt="Sachin.net Online Services"
               width={140}
               height={44}
               className="h-10 w-auto object-contain"
               style={{ maxHeight: "40px", width: "auto" }}
             />
           </Link>
-          <p className="mt-3 text-body text-sm max-w-sm">
-            Premium software development company — websites, ERP, AI &amp; ML solutions.
+          <p className="mt-2 text-body text-sm max-w-sm">
+            Top Website Development &amp; Software Company in Bihar. Custom Business Websites, School ERP, E-Commerce &amp; AI Solutions.
+          </p>
+          <p className="mt-2 text-xs text-slate-400">
+            Headquartered in Siwan (Bihar) · Serving All India
           </p>
           <a
             href={`https://wa.me/${site.whatsapp}`}
@@ -50,10 +64,11 @@ export default function Footer() {
           </a>
         </div>
 
+        {/* Quick Links */}
         <div>
           <h3 className="heading-sm text-sm mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            {quickLinks.map((l) => (
+            {quickLinks.slice(0, 7).map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="text-body hover:text-primary-light transition-colors">
                   {l.label}
@@ -63,21 +78,23 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* Bihar & Service Hubs */}
         <div>
-          <h3 className="heading-sm text-sm mb-3">Services</h3>
+          <h3 className="heading-sm text-sm mb-3">Bihar &amp; Service Hubs</h3>
           <ul className="space-y-2 text-sm">
-            {services.slice(0, 6).map((s) => (
-              <li key={s.title}>
-                <Link href="/services" className="text-body hover:text-primary-light transition-colors">
-                  {s.title}
+            {biharLocations.map((loc) => (
+              <li key={loc.href}>
+                <Link href={loc.href} className="text-body hover:text-primary-light transition-colors">
+                  {loc.label}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
 
+        {/* Contact Column */}
         <div>
-          <h3 className="heading-sm text-sm mb-3">Contact</h3>
+          <h3 className="heading-sm text-sm mb-3">Contact &amp; Location</h3>
           <ul className="space-y-3 text-sm text-body">
             <li>
               <a href={`tel:${site.phoneRaw}`} className="flex items-center gap-3 hover:text-white transition-colors break-anywhere">
@@ -97,14 +114,14 @@ export default function Footer() {
             </li>
           </ul>
           <div className="mt-5">
-            <p className="text-muted mb-2">Follow Us</p>
+            <p className="text-muted mb-2 text-xs">Follow Us</p>
             <SocialLinks />
           </div>
         </div>
       </div>
 
       <div className="border-t border-[var(--border)]">
-        <div className="container-x py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-muted text-center sm:text-left">
+        <div className="container-x py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-muted text-center sm:text-left text-xs">
           <p>© {new Date().getFullYear()} {site.name}. All Rights Reserved.</p>
           <div className="flex gap-4">
             {legalLinks.map((l) => (
@@ -113,7 +130,7 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-          <p>Made with <span className="text-red-500">♥</span> by {site.founder}</p>
+          <p>Founder: {site.founder} · Siwan (Bihar)</p>
         </div>
       </div>
     </footer>
