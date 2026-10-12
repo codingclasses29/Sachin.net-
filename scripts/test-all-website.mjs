@@ -114,6 +114,11 @@ const corePages = [
   "app/blog/page.js",
   "app/privacy/page.js",
   "app/terms/page.js",
+  "app/book-service/page.js",
+  "app/customer/dashboard/page.js",
+  "app/partner/register/page.js",
+  "app/partner/dashboard/page.js",
+  "app/admin/locations/page.js",
 ];
 
 for (const page of corePages) {
@@ -198,6 +203,9 @@ const apiRoutes = [
   "app/api/chat/route.js",
   "app/api/newsletter/route.js",
   "app/api/ml/route.js",
+  "app/api/bookings/route.js",
+  "app/api/partners/route.js",
+  "app/api/locations/route.js",
 ];
 
 for (const api of apiRoutes) {

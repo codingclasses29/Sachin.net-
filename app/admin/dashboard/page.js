@@ -8,6 +8,7 @@ import Icon from "@/components/Icon";
 const sidebarLinks = [
   { label: "Dashboard", href: "/admin/dashboard", icon: "erp" },
   { label: "Leads", href: "/admin/leads", icon: "mail" },
+  { label: "Locations Hub", href: "/admin/locations", icon: "pin" },
   { label: "AI Analytics", href: "/admin/ai-analytics", icon: "code" },
   { label: "Settings", href: "/admin/settings", icon: "shield" },
 ];
@@ -93,6 +94,45 @@ export default function AdminDashboard() {
               <p className="text-xs text-slate-400 mt-1">{s.label}</p>
             </div>
           ))}
+        </div>
+
+        {/* Quick Module Navigation Strip */}
+        <div className="grid sm:grid-cols-3 gap-4 mb-8">
+          <Link
+            href="/admin/locations"
+            className="p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-teal-400 transition-all flex items-center justify-between group"
+          >
+            <div>
+              <div className="text-xs font-bold text-teal-400">ADMIN MODULE</div>
+              <div className="text-sm font-bold text-white group-hover:text-teal-300">Service Locations Hub</div>
+              <div className="text-[11px] text-slate-400">9 Active District Hubs</div>
+            </div>
+            <span className="text-teal-400 font-bold">→</span>
+          </Link>
+
+          <Link
+            href="/customer/dashboard"
+            className="p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-400 transition-all flex items-center justify-between group"
+          >
+            <div>
+              <div className="text-xs font-bold text-blue-400">CUSTOMER MODULE</div>
+              <div className="text-sm font-bold text-white group-hover:text-blue-300">Client Self-Service Portal</div>
+              <div className="text-[11px] text-slate-400">Orders, Tracker &amp; Invoices</div>
+            </div>
+            <span className="text-blue-400 font-bold">→</span>
+          </Link>
+
+          <Link
+            href="/partner/dashboard"
+            className="p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-400 transition-all flex items-center justify-between group"
+          >
+            <div>
+              <div className="text-xs font-bold text-amber-400">PARTNER MODULE</div>
+              <div className="text-sm font-bold text-white group-hover:text-amber-300">Partner Earnings Portal</div>
+              <div className="text-[11px] text-slate-400">Referrals, Leads &amp; Payouts</div>
+            </div>
+            <span className="text-amber-400 font-bold">→</span>
+          </Link>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6">

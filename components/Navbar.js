@@ -148,7 +148,10 @@ export default function Navbar() {
             <Icon name="search" className="w-4 h-4" />
           </button>
           <ThemeToggle />
-          <Link href="/contact" className="btn-primary !py-2 !px-4 xl:!px-5 text-sm">
+          <Link href="/book-service" className="btn-teal !py-2 !px-3 xl:!px-4 text-xs sm:text-sm font-bold whitespace-nowrap shadow-md">
+            Book Service
+          </Link>
+          <Link href="/contact" className="btn-primary !py-2 !px-3 xl:!px-4 text-xs sm:text-sm whitespace-nowrap">
             Get Free Quote
           </Link>
         </div>
@@ -245,6 +248,9 @@ export default function Navbar() {
                 <Icon name="whatsapp" className="w-4 h-4" />
                 WhatsApp Now
               </a>
+              <Link href="/book-service" className="btn-teal w-full text-sm font-bold text-center block">
+                Book Service Online
+              </Link>
               <Link href="/contact" className="btn-primary w-full text-sm">
                 Get Free Quote
               </Link>

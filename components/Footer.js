@@ -5,14 +5,15 @@ import SocialLinks from "./SocialLinks";
 import { site, services } from "@/lib/data";
 
 const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "Live Solutions Showcase", href: "/#banner-showcase" },
+  { label: "Book Service Online", href: "/book-service" },
+  { label: "Client Dashboard", href: "/customer/dashboard" },
+  { label: "Partner Program (Earn 25%)", href: "/partner/register" },
+  { label: "Partner Dashboard", href: "/partner/dashboard" },
   { label: "Services", href: "/services" },
   { label: "Website Banwane Wala", href: "/website-development" },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Portfolio & Live Demos", href: "/portfolio" },
   { label: "Pricing Plans", href: "/pricing" },
   { label: "AI & ML Solutions", href: "/ai-services" },
-  { label: "AI Tools", href: "/ai-tools" },
   { label: "About Sachin Kushwaha", href: "/about" },
   { label: "Contact Us", href: "/contact" },
 ];
@@ -24,6 +25,7 @@ const biharLocations = [
   { label: "Smart School ERP Bihar", href: "/school-erp-bihar" },
   { label: "E-Commerce Development Bihar", href: "/ecommerce-development-bihar" },
   { label: "Mobile App Development", href: "/mobile-app-development" },
+  { label: "Admin Locations Hub", href: "/admin/locations" },
 ];
 
 const legalLinks = [
@@ -68,7 +70,7 @@ export default function Footer() {
         <div>
           <h3 className="heading-sm text-sm mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            {quickLinks.slice(0, 7).map((l) => (
+            {quickLinks.map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="text-body hover:text-primary-light transition-colors">
                   {l.label}

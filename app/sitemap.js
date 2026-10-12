@@ -4,6 +4,11 @@ export default function sitemap() {
   const base = "https://www.sachin-net.xyz";
   const routes = [
     { path: "", priority: 1.0, changeFrequency: "daily" },
+    { path: "/book-service", priority: 0.95, changeFrequency: "daily" },
+    { path: "/customer/dashboard", priority: 0.85, changeFrequency: "daily" },
+    { path: "/partner/register", priority: 0.90, changeFrequency: "weekly" },
+    { path: "/partner/dashboard", priority: 0.85, changeFrequency: "daily" },
+    { path: "/admin/locations", priority: 0.85, changeFrequency: "weekly" },
     { path: "/website-development-bihar", priority: 0.95, changeFrequency: "weekly" },
     { path: "/website-development-siwan", priority: 0.95, changeFrequency: "weekly" },
     { path: "/website-development-patna", priority: 0.90, changeFrequency: "weekly" },
