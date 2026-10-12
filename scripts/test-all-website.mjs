@@ -88,6 +88,17 @@ async function testData() {
   assert(dataContent.includes("https://gramvikasfoundation.netlify.app/"), "Live Demo 2 exists: gramvikasfoundation.netlify.app");
   assert(dataContent.includes("https://medicare-hospitl-1.netlify.app/"), "Live Demo 3 exists: medicare-hospitl-1.netlify.app");
   assert(dataContent.includes("https://rurallysmile-org.vercel.app/"), "Live Demo 4 exists: rurallysmile-org.vercel.app");
+
+  // Admin Security & 2FA checks
+  const adminLoginRoute = fs.readFileSync(path.join(rootDir, "app/api/admin/login/route.js"), "utf8");
+  assert(adminLoginRoute.includes('ALLOWED_ADMIN_EMAIL = "codingclasses29@gmail.com"'), "Admin email strictly locked to codingclasses29@gmail.com");
+  assert(adminLoginRoute.includes('ALLOWED_ADMIN_PASSWORD = "Sachin2026@#"'), "Admin password strictly locked to Sachin2026@#");
+  assert(adminLoginRoute.includes("verify_otp"), "Admin login has 2FA OTP verification step");
+  assert(adminLoginRoute.includes("sendAdminLoginOtpEmail"), "Admin login sends real SMTP OTP email");
+
+  const emailUtil = fs.readFileSync(path.join(rootDir, "lib/email.js"), "utf8");
+  assert(emailUtil.includes("sendAdminLoginOtpEmail"), "lib/email.js exports sendAdminLoginOtpEmail");
+  assert(emailUtil.includes("yticxectlvwwzgsb"), "lib/email.js has valid SMTP App Password configured");
 }
 testData();
 
