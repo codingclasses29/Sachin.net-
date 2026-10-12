@@ -11,10 +11,10 @@ export default function PricingSection({ first = false }) {
   return (
     <PageSection id="pricing" first={first}>
       <SectionHeading
-        badge="Transparent Pricing"
-        title="Simple & Honest"
-        highlight="Website Plans"
-        desc="No hidden charges. Choose the right package for your business or contact us for custom software requirements."
+        badge="Custom Quotation"
+        title="Tailored Scope &"
+        highlight="Best Quotation"
+        desc="No hidden charges. Client aur software requirements ke according personalized quotation — direct Sachin Kushwaha se paayein."
       />
 
       {/* 4 Main Pricing Cards */}
@@ -74,7 +74,7 @@ export default function PricingSection({ first = false }) {
               <div className="mt-6 pt-4 border-t border-[var(--border)]">
                 <a
                   href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
-                    `Hello Sachin Kushwaha Sir! I want to choose the "${plan.name}" plan (${plan.price}) on sachin.net.`
+                    `Hello Sachin Kushwaha Sir! I want quotation for "${plan.name}" plan on sachin.net. Please share quotation based on my software requirements.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -85,7 +85,7 @@ export default function PricingSection({ first = false }) {
                   }`}
                 >
                   <Icon name="whatsapp" className="w-3.5 h-3.5" />
-                  <span>{plan.ctaText || "Get Started"}</span>
+                  <span>{plan.ctaText || "Get Quotation"}</span>
                 </a>
               </div>
             </div>
@@ -122,14 +122,14 @@ export default function PricingSection({ first = false }) {
 
           <a
             href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
-              "Hello Sachin Sir! I want old website bug fixing & speed optimization (₹999 offer)."
+              "Hello Sachin Sir! I want old website bug fixing & speed optimization. Please provide a custom quotation."
             )}`}
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg transition-transform hover:scale-105 whitespace-nowrap"
           >
             <Icon name="whatsapp" className="w-4 h-4" />
-            <span>Fix Website @ ₹999</span>
+            <span>Get Bug Fix Quotation</span>
           </a>
         </div>
       </Reveal>

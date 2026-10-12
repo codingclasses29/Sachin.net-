@@ -1,27 +1,27 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import PageSection from "../PageSection";
 import Reveal from "../Reveal";
 import Icon from "../Icon";
-import { quoteOptions } from "@/lib/data";
+import { quoteOptions, site } from "@/lib/data";
 
 export default function QuoteCalculatorSection() {
   const [type, setType] = useState(quoteOptions[0].id);
   const [pages, setPages] = useState(5);
 
   const selected = quoteOptions.find((q) => q.id === type) || quoteOptions[0];
-  const estimate = Math.round(selected.base + pages * selected.perPage);
 
   return (
     <PageSection className="section-india-saffron" alt>
       <Reveal className="text-center max-w-2xl mx-auto">
         <span className="section-badge india-badge">Interactive Tool</span>
         <h2 className="mt-4 heading-pravisht india-heading mx-auto">
-          Instant <span className="text-india-saffron">Price Estimate</span>
+          Tailored <span className="text-india-saffron">Scope &amp; Quotation</span>
         </h2>
-        <p className="mt-3 text-body-light">Apne project ka rough budget turant dekhein — free &amp; no signup.</p>
+        <p className="mt-3 text-body-light">
+          Apni zaroorat select karein — client aur software requirement ke hisaab se customized quote paayein.
+        </p>
       </Reveal>
 
       <Reveal delay={100} className="mt-10 max-w-2xl mx-auto">
@@ -53,16 +53,26 @@ export default function QuoteCalculatorSection() {
           />
 
           <div className="mt-8 p-5 rounded-xl india-estimate-box text-center">
-            <p className="text-sm text-slate-600">Estimated starting price</p>
-            <p className="mt-1 text-3xl sm:text-4xl font-extrabold india-gradient-text">
-              ₹{estimate.toLocaleString("en-IN")}+
+            <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Custom Quotation</p>
+            <p className="mt-1 text-2xl sm:text-3xl font-extrabold india-gradient-text">
+              कोटेशन अनुसार (Tailored Quote)
             </p>
-            <p className="text-xs text-slate-500 mt-2">Final quote depends on exact requirements</p>
+            <p className="text-xs text-slate-600 mt-2">
+              Scope: <strong>{selected.label}</strong> · Approx <strong>{pages} Pages/Features</strong>
+            </p>
           </div>
 
-          <Link href="/contact" className="btn-primary w-full mt-6 justify-center">
-            Get Exact Quote <Icon name="arrow" className="w-4 h-4" />
-          </Link>
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
+              `Hello Sachin Sir! Mujhe ${selected.label} banwana hai with approx ${pages} pages/features. Kripya requirements ke hisaab se customized quotation share karein.`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-whatsapp w-full mt-6 justify-center !py-3 font-bold text-sm shadow-md flex items-center gap-2"
+          >
+            <Icon name="whatsapp" className="w-5 h-5" />
+            <span>Get Tailored Quotation on WhatsApp</span>
+          </a>
         </div>
       </Reveal>
     </PageSection>

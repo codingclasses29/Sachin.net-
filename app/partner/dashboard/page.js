@@ -18,7 +18,7 @@ export default function PartnerDashboardPage() {
     clientName: "",
     clientPhone: "",
     service: "School Management ERP",
-    budget: "₹24,999",
+    budget: "Custom Quotation",
   });
   const [leadSubmitSuccess, setLeadSubmitSuccess] = useState(false);
 
@@ -76,7 +76,7 @@ export default function PartnerDashboardPage() {
       if (data.ok) {
         setLeads([data.lead, ...leads]);
         setLeadSubmitSuccess(true);
-        setLeadForm({ clientName: "", clientPhone: "", service: "School Management ERP", budget: "₹24,999" });
+        setLeadForm({ clientName: "", clientPhone: "", service: "School Management ERP", budget: "Custom Quotation" });
         setTimeout(() => setLeadSubmitSuccess(false), 4000);
       }
     } catch (err) {
@@ -356,10 +356,10 @@ Official Website: ${referralUrl}`;
                         >
                           <option value="School Management ERP">School Management ERP</option>
                           <option value="Hospital & Clinic Software">Hospital &amp; Clinic Software</option>
-                          <option value="Business Website (₹2,999 - ₹9,999)">Business Website</option>
+                          <option value="Business Website">Business Website</option>
                           <option value="E-Commerce Online Store">E-Commerce Store</option>
-                          <option value="NGO & Trust Portal (₹6,999)">NGO &amp; Trust Portal</option>
-                          <option value="Old Website Bug Fixing (₹999)">Old Website Bug Fixing</option>
+                          <option value="NGO & Trust Portal">NGO &amp; Trust Portal</option>
+                          <option value="Old Website Bug Fixing">Old Website Bug Fixing</option>
                         </select>
                       </div>
 
@@ -372,11 +372,11 @@ Official Website: ${referralUrl}`;
                           onChange={(e) => setLeadForm({ ...leadForm, budget: e.target.value })}
                           className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-hidden focus:border-amber-400"
                         >
-                          <option value="₹2,999 (Starter)">₹2,999 (Starter)</option>
-                          <option value="₹6,999 (NGO Package)">₹6,999 (NGO Package)</option>
-                          <option value="₹9,999 (Business Pro)">₹9,999 (Business Pro)</option>
-                          <option value="₹19,999 - ₹29,999 (School ERP)">₹19,999 - ₹29,999 (School ERP)</option>
-                          <option value="₹25,000+ (Custom Enterprise)">₹25,000+ (Enterprise)</option>
+                          <option value="Custom Quote (Starter Scope)">Custom Quote (Starter)</option>
+                          <option value="Custom Quote (NGO Scope)">Custom Quote (NGO Package)</option>
+                          <option value="Custom Quote (Business Pro Scope)">Custom Quote (Business Pro)</option>
+                          <option value="Custom Quote (School ERP Scope)">Custom Quote (School ERP)</option>
+                          <option value="Custom Quote (Enterprise Scope)">Custom Quote (Enterprise)</option>
                         </select>
                       </div>
                     </div>
@@ -524,14 +524,14 @@ Official Website: ${referralUrl}`;
                         tag: "Healthcare",
                       },
                       {
-                        title: "₹2,999 Website Offer Flyer",
+                        title: "Website Starter Offer Flyer",
                         type: "Social Media Banner",
                         desc: "High-conversion poster for local shops and business owners.",
                         tag: "Promo",
                       },
                       {
                         title: "NGO Digital Package Poster",
-                        type: "Print Poster (₹6,999)",
+                        type: "Print Poster (Digital Solution)",
                         desc: "80G receipts, digital ID card generator & donation QR.",
                         tag: "NGO / Trust",
                       },

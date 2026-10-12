@@ -95,7 +95,7 @@ Mujhe Partner Kit aur onboarding details provide karein.`;
           {/* Partner Benefits Strip */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
             {[
-              { icon: "wallet", title: "15% - 25% Commission", desc: "Earn ₹1,500 to ₹10,000 per deal" },
+              { icon: "wallet", title: "15% - 25% Commission", desc: "Attractive earnings on every closed deal" },
               { icon: "shield", title: "Direct Founder Backing", desc: "Technical calls handled by Sachin Sir" },
               { icon: "rocket", title: "Instant UPI Payouts", desc: "Fast disbursement upon client milestone" },
               { icon: "support", title: "Free Marketing Kit", desc: "Flyers, pitch deck & sample demos" },
@@ -354,9 +354,9 @@ Mujhe Partner Kit aur onboarding details provide karein.`;
                           onChange={(e) => setFormData({ ...formData, expectedMonthlyClients: e.target.value })}
                           className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-hidden focus:border-amber-400 transition-colors"
                         >
-                          <option value="1-2 Clients (₹3,000 - ₹6,000 / mo)">1-2 Clients (₹3,000 - ₹6,000 / mo)</option>
-                          <option value="3-5 Clients (₹10,000 - ₹25,000 / mo)">3-5 Clients (₹10,000 - ₹25,000 / mo)</option>
-                          <option value="5+ Clients (₹30,000+ / mo)">5+ Clients (₹30,000+ / mo)</option>
+                          <option value="1-2 Clients per month">1-2 Clients per month</option>
+                          <option value="3-5 Clients per month">3-5 Clients per month</option>
+                          <option value="5+ Clients per month">5+ Clients per month</option>
                         </select>
                       </div>
                     </div>

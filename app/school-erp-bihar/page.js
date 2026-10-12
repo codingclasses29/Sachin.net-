@@ -73,9 +73,10 @@ export default function SchoolErpBiharPage() {
     applicationCategory: "EducationalSoftware",
     operatingSystem: "Web, Android, iOS",
     offers: {
-      "@type": "Offer",
-      price: "29999",
+      "@type": "AggregateOffer",
       priceCurrency: "INR",
+      price: "0",
+      description: "Custom quotation based on student strength and modules required",
     },
     publisher: {
       "@type": "Organization",

@@ -75,13 +75,11 @@ async function testData() {
   assert(dataContent.includes('domain: "www.sachin-net.xyz"'), "Official domain is www.sachin-net.xyz");
   assert(dataContent.includes('url: "https://www.sachin-net.xyz"'), "Official URL is https://www.sachin-net.xyz");
 
-  // Pricing checks
+  // Pricing checks (Custom Quotation model)
   assert(dataContent.includes("Starter Website"), "Starter Website package exists");
-  assert(dataContent.includes("₹2,999"), "Starter Website price is ₹2,999");
+  assert(dataContent.includes("Custom Quote"), "Starter Website price is Custom Quote");
   assert(dataContent.includes("NGO Website & App"), "NGO package exists");
-  assert(dataContent.includes("₹6,999"), "NGO package price is ₹6,999");
   assert(dataContent.includes("Old Website Bug Fixing"), "Bug fixing service exists");
-  assert(dataContent.includes("₹999/-"), "Bug fix price is ₹999/-");
 
   // Live client demo links
   assert(dataContent.includes("https://medicarehospitl.netlify.app/"), "Live Demo 1 exists: medicarehospitl.netlify.app");
@@ -198,10 +196,10 @@ assert(offersExists, "SpecialOffersSection.js component exists");
 if (offersExists) {
   const offersContent = fs.readFileSync(offersPath, "utf8");
   assert(offersContent.includes("WEBSITE बनवानी है KYA"), "Offer 1 has 'WEBSITE बनवानी है KYA'");
-  assert(offersContent.includes("₹2,999"), "Offer 1 has '₹2,999'");
+  assert(offersContent.includes("कोटेशन अनुसार"), "Offer 1 has 'कोटेशन अनुसार' quotation");
   assert(offersContent.includes("NGO संस्था"), "Offer 2 has 'NGO संस्था'");
-  assert(offersContent.includes("₹6,999"), "Offer 2 has '₹6,999'");
-  assert(offersContent.includes("₹999/-"), "Bug fix banner has '₹999/-'");
+  assert(offersContent.includes("कोटेशन अनुसार"), "Offer 2 has 'कोटेशन अनुसार' quotation");
+  assert(offersContent.includes("Custom Quote"), "Bug fix banner has Custom Quote");
   assert(offersContent.includes("9931306292"), "WhatsApp phone number is present in CTAs");
   assert(offersContent.includes("https://gramvikasfoundation.netlify.app/"), "SpecialOffers has Gram Vikas NGO live link");
   assert(offersContent.includes("https://rurallysmile-org.vercel.app/"), "SpecialOffers has Rurally Smile Org live link");

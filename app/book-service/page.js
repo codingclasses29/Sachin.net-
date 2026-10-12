@@ -104,9 +104,9 @@ export default function BookServicePage() {
 📱 Phone: ${booking.customerPhone}
 🏢 Business: ${booking.businessName || "N/A"}
 🌐 Service: ${booking.serviceTitle} (${booking.packageName})
-💰 Price: ${booking.packagePrice}
+💰 Quotation: ${booking.packagePrice} (Requirements Scope)
 📍 Location: ${booking.location}
-Kripya project verification aur discussion start karein.`;
+Kripya project verification aur quotation discussion start karein.`;
     return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(text)}`;
   };
 
@@ -176,7 +176,7 @@ Kripya project verification aur discussion start karein.`;
                   <span className="font-bold text-amber-300">{bookingResult.packageName}</span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-slate-800 text-slate-300">
-                  <span>Estimated Investment:</span>
+                  <span>Quotation Plan:</span>
                   <span className="font-extrabold text-emerald-400 text-base">{bookingResult.packagePrice}</span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-slate-800 text-slate-300">
@@ -269,7 +269,7 @@ Kripya project verification aur discussion start karein.`;
                             {active && <span className="w-2 h-2 rounded-full bg-teal-400" />}
                           </div>
                           <div className="text-xs font-bold leading-tight line-clamp-1">{svc.title}</div>
-                          <div className="text-[10px] text-teal-300/80 mt-1">From {svc.priceStarting}</div>
+                          <div className="text-[10px] text-teal-300/80 mt-1">{svc.priceStarting}</div>
                         </button>
                       );
                     })}
@@ -283,7 +283,7 @@ Kripya project verification aur discussion start karein.`;
                       <span>2️⃣</span>
                       <span>Choose Package for {selectedService.title}</span>
                     </span>
-                    <span className="text-xs text-amber-300 font-semibold">Transparent Pricing</span>
+                    <span className="text-xs text-amber-300 font-semibold">Custom Quotation</span>
                   </div>
 
                   <div className="space-y-3">
@@ -324,7 +324,7 @@ Kripya project verification aur discussion start karein.`;
 
                           <div className="sm:text-right shrink-0">
                             <div className="text-lg font-extrabold text-emerald-400">{pkg.price}</div>
-                            <div className="text-[10px] text-slate-400">All Included</div>
+                            <div className="text-[10px] text-slate-400">Scope Based</div>
                           </div>
                         </div>
                       );

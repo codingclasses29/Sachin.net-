@@ -6,15 +6,15 @@ import { site } from "@/lib/data";
 
 export default function SpecialOffersSection() {
   const whatsappStarter = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
-    "Hello Sachin Sir! I saw your Website Offer (Starting ₹2,999). I want to make a website for my business."
+    "Hello Sachin Sir! I saw your Website Offer on sachin.net. I want to build a website for my business. Please send me a custom quotation based on my requirements."
   )}`;
 
   const whatsappNGO = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
-    "Hello Sachin Sir! I want to build a complete NGO Website & Mobile Portal (₹6,999 package with ID Card, 80G Receipt & Certificate generator)."
+    "Hello Sachin Sir! I want to build a complete NGO Website & Mobile Portal (with ID Card, 80G Receipt & Certificate generator). Please share quotation according to my NGO requirements."
   )}`;
 
   const whatsappBugFix = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
-    "Hello Sachin Sir! I need bug fixing & speed optimization for my existing website (₹999 offer)."
+    "Hello Sachin Sir! I need bug fixing & speed optimization for my existing website. Please provide a custom quotation."
   )}`;
 
   return (
@@ -94,23 +94,20 @@ export default function SpecialOffersSection() {
               {/* Price Banner */}
               <div className="my-4 p-4 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-between gap-4">
                 <div>
-                  <div className="text-[10px] font-extrabold text-red-400 uppercase tracking-wider">
-                    SPECIAL LAUNCH PRICE
+                  <div className="text-[10px] font-extrabold text-amber-400 uppercase tracking-wider">
+                    CUSTOM QUOTATION BASED ON REQUIREMENTS
                   </div>
                   <div className="flex items-baseline gap-2 mt-0.5">
-                    <span className="text-sm sm:text-base text-slate-400 line-through">
-                      ₹19,999
+                    <span className="text-2xl sm:text-3xl font-black text-amber-400 tracking-tight">
+                      कोटेशन अनुसार
                     </span>
-                    <span className="text-3xl sm:text-4xl font-black text-amber-400 tracking-tight">
-                      ₹2,999
-                    </span>
-                    <span className="text-xs text-amber-300 font-semibold">onwards</span>
+                    <span className="text-xs text-slate-300 font-semibold">(Best Quote on Request)</span>
                   </div>
                 </div>
 
                 <div className="text-right">
                   <span className="px-2.5 py-1 rounded-md bg-amber-400 text-slate-950 font-black text-xs">
-                    SAVE 85%
+                    BEST DEAL
                   </span>
                 </div>
               </div>
@@ -175,14 +172,14 @@ export default function SpecialOffersSection() {
                   <div className="text-[11px] text-slate-400">Speed, error &amp; mobile responsive fixes</div>
                 </div>
                 <div className="text-right">
-                  <div className="text-lg font-black text-white">₹999/-</div>
+                  <div className="text-base font-black text-amber-400">Custom Quote</div>
                   <a
                     href={whatsappBugFix}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[10px] font-bold text-amber-400 hover:underline"
+                    className="text-[10px] font-bold text-amber-300 hover:underline"
                   >
-                    Fix Now →
+                    Get Quotation →
                   </a>
                 </div>
               </div>
@@ -201,7 +198,7 @@ export default function SpecialOffersSection() {
                     className="w-full py-3.5 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm flex items-center justify-center gap-2 shadow-lg transition-transform hover:scale-[1.02]"
                   >
                     <Icon name="whatsapp" className="w-4 h-4 text-emerald-800" />
-                    <span>Book Website @ ₹2,999</span>
+                    <span>Get Free Quotation</span>
                   </a>
 
                   <Link
@@ -253,10 +250,10 @@ export default function SpecialOffersSection() {
               <div className="my-3 p-4 rounded-2xl bg-gradient-to-r from-red-600 to-rose-700 text-white flex items-center justify-between gap-4 shadow-lg shadow-red-950/50">
                 <div>
                   <div className="text-xs uppercase tracking-wider text-rose-200 font-bold">
-                    कंप्लीट डिजिटल पैकेज
+                    कंप्लीट डिजिटल NGO पैकेज
                   </div>
-                  <div className="text-3xl sm:text-4xl font-black text-white tracking-tight mt-0.5">
-                    सिर्फ ₹6,999/- <span className="text-xs font-normal">में</span>
+                  <div className="text-2xl sm:text-3xl font-black text-white tracking-tight mt-0.5">
+                    कोटेशन अनुसार <span className="text-xs font-normal">(Custom Quote)</span>
                   </div>
                 </div>
 
@@ -374,7 +371,7 @@ export default function SpecialOffersSection() {
                     className="w-full py-3.5 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-black text-sm flex items-center justify-center gap-2 shadow-lg transition-transform hover:scale-[1.02]"
                   >
                     <Icon name="whatsapp" className="w-4 h-4" />
-                    <span>Book NGO Portal @ ₹6,999</span>
+                    <span>Get NGO Portal Quotation</span>
                   </a>
 
                   <a
