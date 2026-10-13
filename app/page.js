@@ -3,6 +3,7 @@ import BannerSlider from "@/components/home/BannerSlider";
 import LiveTicker from "@/components/home/LiveTicker";
 import EmpowerSection from "@/components/home/EmpowerSection";
 import ServiceTabsSection from "@/components/home/ServiceTabsSection";
+import SpecialOffersSection from "@/components/home/SpecialOffersSection";
 import IndiaProudSection from "@/components/home/IndiaProudSection";
 import PortfolioSection from "@/components/home/PortfolioSection";
 import ServicesSection from "@/components/home/ServicesSection";
@@ -12,6 +13,7 @@ import TeamSection from "@/components/home/TeamSection";
 import WhyChooseUsSection from "@/components/home/WhyChooseUsSection";
 import TechStackSection from "@/components/home/TechStackSection";
 import PricingSection from "@/components/home/PricingSection";
+import QuoteCalculatorSection from "@/components/home/QuoteCalculatorSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ProcessSection from "@/components/home/ProcessSection";
 import BlogSection from "@/components/home/BlogSection";
@@ -28,7 +30,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      {/* 1. Hero Section: We Build Websites for Bharat with Typing Effect & Stats */}
+      {/* 1. TCS-Style Corporate AI & Digital Hero + 4 Technology Capabilities */}
       <Hero />
 
       {/* 2. Interactive Solutions Banner Slider: 5 Solutions Showcase */}
@@ -43,11 +45,11 @@ export default function Home() {
       {/* 5. Interactive Services Hub: Tabs for Websites, School ERP, AI & ML, E-Commerce */}
       <ServiceTabsSection />
 
-      {/* 6. Proudly Made in India: States Served, Live IST Clock & Impact Stats */}
-      <IndiaProudSection />
-
-      {/* 7. Featured Projects / Portfolio: EduSmart School, ShopKart, MedCare */}
+      {/* 6. Featured Projects / Portfolio: Live Client Portals & Case Studies */}
       <PortfolioSection limit={3} />
+
+      {/* 7. Special Promotional Deals (Custom Quotation Model) */}
+      <SpecialOffersSection />
 
       {/* 8. Comprehensive Digital Solutions: 6 Full Service Cards */}
       <ServicesSection limit={6} />
@@ -55,37 +57,43 @@ export default function Home() {
       {/* 9. Future-Ready AI Solutions: Chatbots, Machine Learning, Computer Vision */}
       <AISection />
 
-      {/* 10. About Sachin Kushwaha: Founder, Full Stack Developer, IITM Pravartak */}
+      {/* 10. Proudly Made in India: States Served, Live IST Clock & Impact Stats */}
+      <IndiaProudSection />
+
+      {/* 11. About Sachin Kushwaha: Founder, Full Stack Developer, IITM Pravartak */}
       <AboutSection />
 
-      {/* 11. Meet the Developers: Sachin Kumar, Sanjeev Kumar & Engineering Team */}
+      {/* 12. Meet the Developers: Sachin Kumar, Sanjeev Kumar & Engineering Team */}
       <TeamSection />
 
-      {/* 12. Why Choose Sachin.net: Fast Delivery, Clean Code, Affordable Pricing */}
+      {/* 13. Why Choose Sachin.net: Fast Delivery, Clean Code, Custom Quotation */}
       <WhyChooseUsSection />
 
-      {/* 13. Technologies We Master: Next.js, React, Node.js, Python, MongoDB */}
+      {/* 14. Technologies We Master: Next.js, React, Node.js, Python, MongoDB */}
       <TechStackSection />
 
-      {/* 14. Transparent Pricing Plans: Starter, Business Pro, School ERP, Enterprise */}
+      {/* 15. Tailored Scope & Quotation Plans */}
       <PricingSection />
 
-      {/* 15. Client Testimonials: Real Client Reviews Across India */}
+      {/* 16. Interactive Project Scope & Quotation Tool */}
+      <QuoteCalculatorSection />
+
+      {/* 17. Client Testimonials: Real Client Reviews Across India */}
       <TestimonialsSection />
 
-      {/* 16. How We Work: 6-Step Structured Project Delivery Process */}
+      {/* 18. How We Work: 6-Step Structured Project Delivery Process */}
       <ProcessSection />
 
-      {/* 17. Latest Insights & Tech Guides: Blog Articles */}
+      {/* 19. Latest Insights & Tech Guides: Blog Articles */}
       <BlogSection />
 
-      {/* 18. Frequently Asked Questions: Delivery Time, Costs, Mobile Responsive, Support */}
+      {/* 20. Frequently Asked Questions */}
       <FaqSection />
 
-      {/* 19. Newsletter Subscription */}
+      {/* 21. Newsletter Subscription */}
       <NewsletterSection />
 
-      {/* 20. Final Conversion CTA Banner: Talk to Sachin Kushwaha */}
+      {/* 22. Final Conversion CTA Banner: Talk to Sachin Kushwaha */}
       <CtaSection />
     </>
   );
