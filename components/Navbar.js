@@ -7,67 +7,369 @@ import { usePathname } from "next/navigation";
 import Icon from "./Icon";
 import SiteSearch from "./SiteSearch";
 import { useLanguage } from "./Providers";
-import { navMainLinks, navMoreLinks, site } from "@/lib/data";
+import { site } from "@/lib/data";
 
 const corporateMenus = [
   {
     id: "what-we-do",
     labelEn: "What we do",
     labelHi: "हम क्या करते हैं",
+    taglineEn: "SACHIN-NET IT SOFTWARE & CLOUD ENGINEERING",
+    taglineHi: "SACHIN-NET आईटी सॉफ्टवेयर और क्लाउड इंजीनियरिंग",
+    overviewEn:
+      "End-to-end custom software, AI automation, enterprise web platforms, and cloud ERP engineered by Sachin-Net Technologies.",
+    overviewHi:
+      "Sachin-Net Technologies द्वारा आधुनिक AI, कस्टम वेब प्लेटफॉर्म, मोबाइल ऐप और क्लाउड ERP सॉफ्टवेयर का निर्माण।",
+    spotlight: {
+      image: "/banners/website-development.png",
+      badge: "SACHIN-NET FLAGSHIP SUITE",
+      titleEn: "Sachin-Net Enterprise Web & Cloud Architecture",
+      titleHi: "Sachin-Net एंटरप्राइज वेब और क्लाउड आर्किटेक्चर",
+      descEn:
+        "Full-stack Next.js 16, React, Node.js, and Python AI software tailored to your exact business requirements.",
+      descHi:
+        "आपके बिज़नेस के अनुसार कस्टम कोटेशन और आधुनिक फुल-स्टैक सॉफ्टवेयर समाधान।",
+      modules: ["Next.js 16 Cloud", "Custom Admin CMS", "24×7 SLA Support"],
+      ctaEn: "Explore All IT Services →",
+      ctaHi: "सभी आईटी सेवाएं देखें →",
+      href: "/services",
+    },
     items: [
-      { labelEn: "All Technology Services", labelHi: "सभी टेक्नोलॉजी सेवाएं", href: "/services", desc: "End-to-end web, software & cloud engineering" },
-      { labelEn: "Website Development", labelHi: "वेबसाइट डेवलपमेंट", href: "/website-development", desc: "Next.js & React corporate business websites" },
-      { labelEn: "School Management ERP", labelHi: "स्कूल मैनेजमेंट ERP", href: "/school-erp-bihar", desc: "Admissions, fee automation, exams & parent app" },
-      { labelEn: "E-Commerce Platforms", labelHi: "ई-कॉमर्स ऑनलाइन स्टोर", href: "/ecommerce-development-bihar", desc: "Online stores with UPI, Razorpay & inventory" },
-      { labelEn: "Mobile App Development", labelHi: "मोबाइल ऐप डेवलपमेंट", href: "/mobile-app-development", desc: "Android & iOS apps built for scale" },
-      { labelEn: "AI & Machine Learning", labelHi: "AI और मशीन लर्निंग", href: "/ai-services", desc: "Custom chatbots, OCR & workflow automation" },
-      { labelEn: "Instant Service Booking", labelHi: "ऑनलाइन सर्विस बुकिंग", href: "/book-service", desc: "Book your project scope directly online" },
+      {
+        labelEn: "Sachin-Net Enterprise Web Suite",
+        labelHi: "Sachin-Net वेबसाइट डेवलपमेंट",
+        href: "/website-development",
+        image: "/banners/website-development.png",
+        desc: "Next.js & React corporate websites with custom CMS & SEO",
+      },
+      {
+        labelEn: "Sachin-Net Smart School ERP",
+        labelHi: "Sachin-Net स्कूल मैनेजमेंट ERP",
+        href: "/school-erp-bihar",
+        image: "/banners/school-management.png",
+        desc: "Admissions, automated fee receipts, exams & parent mobile app",
+      },
+      {
+        labelEn: "Sachin-Net E-Commerce Cloud",
+        labelHi: "Sachin-Net ई-कॉमर्स प्लेटफॉर्म",
+        href: "/ecommerce-development-bihar",
+        image: "/images/portfolio-shop.png",
+        desc: "Multi-category online stores with UPI, Razorpay & GST billing",
+      },
+      {
+        labelEn: "Sachin-Net Mobile App Studio",
+        labelHi: "Sachin-Net मोबाइल ऐप स्टूडियो",
+        href: "/mobile-app-development",
+        image: "/banners/digital-services.png",
+        desc: "Android & iOS apps with real-time cloud sync & Play Store launch",
+      },
+      {
+        labelEn: "Sachin-Net AI & ML Solutions",
+        labelHi: "Sachin-Net AI और मशीन लर्निंग",
+        href: "/ai-services",
+        image: "/banners/hosting-servers.png",
+        desc: "Custom Gemini/GPT chatbots, OCR & predictive business analytics",
+      },
+      {
+        labelEn: "Sachin-Net Online Service Booking",
+        labelHi: "Sachin-Net ऑनलाइन सर्विस बुकिंग",
+        href: "/book-service",
+        image: "/images/portfolio-health.png",
+        desc: "Submit your software scope & receive a tailored custom quotation",
+      },
     ],
   },
   {
     id: "who-we-are",
     labelEn: "Who we are",
     labelHi: "हमारे बारे में",
+    taglineEn: "ABOUT SACHIN-NET TECHNOLOGIES & SERVICES",
+    taglineHi: "SACHIN-NET TECHNOLOGIES का परिचय",
+    overviewEn:
+      "Headquartered in Siwan (Bihar) and serving 15+ Indian states with 100+ delivered enterprise, healthcare, education, and NGO platforms.",
+    overviewHi:
+      "सीवान (बिहार) से पूरे भारत के 15+ राज्यों में 100+ सफल सॉफ्टवेयर और वेबसाइट प्रोजेक्ट्स की डिलीवरी।",
+    spotlight: {
+      image: "/team/sachin-kumar.png",
+      badge: "LEADERSHIP & VISION",
+      titleEn: "Founded by Sachin Kushwaha · IITM Pravartak",
+      titleHi: "संस्थापक: सचिन कुशवाहा · फुल-स्टैक आर्किटेक्ट",
+      descEn:
+        "Building Bharat's most trusted AI-led software engineering & digital transformation partner.",
+      descHi:
+        "हर व्यवसाय, स्कूल, अस्पताल और संस्था को विश्वस्तरीय आईटी सॉफ्टवेयर से जोड़ने का संकल्प।",
+      modules: ["100+ Live Clients", "15+ States Served", "99% Satisfaction"],
+      ctaEn: "Read Company Profile →",
+      ctaHi: "कंपनी प्रोफाइल पढ़ें →",
+      href: "/about",
+    },
     items: [
-      { labelEn: "Company Profile & Vision", labelHi: "कंपनी प्रोफाइल और विज़न", href: "/about", desc: "Founded by Sachin Kushwaha · Serving 15+ States" },
-      { labelEn: "Bihar Digital Initiative", labelHi: "बिहार डिजिटल सेवाएं", href: "/website-development-bihar", desc: "Empowering businesses across Bihar & Purvanchal" },
-      { labelEn: "Siwan Headquarters", labelHi: "सीवान हेडक्वार्टर", href: "/website-development-siwan", desc: "Core engineering & founder consultation center" },
-      { labelEn: "Patna Technology Hub", labelHi: "पटना टेक्नोलॉजी हब", href: "/website-development-patna", desc: "Capital hub for enterprises, hospitals & startups" },
-      { labelEn: "Regional Service Hubs", labelHi: "हमारे सर्विस सेंटर्स", href: "/admin/locations", desc: "Explore all active service hubs across Bharat" },
+      {
+        labelEn: "Sachin-Net Corporate Profile",
+        labelHi: "Sachin-Net कंपनी प्रोफाइल",
+        href: "/about",
+        image: "/banners/website-development.png",
+        desc: "Vision, mission, leadership & engineering excellence",
+      },
+      {
+        labelEn: "Sachin-Net Bihar Digital Hub",
+        labelHi: "Sachin-Net बिहार डिजिटल हब",
+        href: "/website-development-bihar",
+        image: "/banners/digital-services.png",
+        desc: "Statewide IT software & web engineering across Bihar",
+      },
+      {
+        labelEn: "Sachin-Net Siwan Headquarters",
+        labelHi: "Sachin-Net सीवान हेडक्वार्टर",
+        href: "/website-development-siwan",
+        image: "/banners/hosting-servers.png",
+        desc: "Core software R&D center & direct founder consultation",
+      },
+      {
+        labelEn: "Sachin-Net Patna Enterprise Hub",
+        labelHi: "Sachin-Net पटना टेक्नोलॉजी हब",
+        href: "/website-development-patna",
+        image: "/banners/hospital-management.png",
+        desc: "Dedicated IT delivery for Patna hospitals, colleges & startups",
+      },
+      {
+        labelEn: "Sachin-Net Regional Service Centers",
+        labelHi: "Sachin-Net सर्विस लोकेशन्स",
+        href: "/admin/locations",
+        image: "/banners/school-management.png",
+        desc: "Explore all active delivery hubs across Bihar, UP & NCR",
+      },
     ],
   },
   {
     id: "solutions",
     labelEn: "Solutions",
     labelHi: "समाधान व प्रोडक्ट्स",
+    taglineEn: "SACHIN-NET LIVE ERP PRODUCTS & PLATFORMS",
+    taglineHi: "SACHIN-NET लाइव ERP प्रोडक्ट्स और प्लेटफॉर्म्स",
+    overviewEn:
+      "Production-verified cloud ERP systems for multi-specialty hospitals, schools, NGOs, and e-commerce enterprises.",
+    overviewHi:
+      "अस्पतालों, स्कूलों, NGO संस्थाओं और ई-कॉमर्स के लिए लाइव प्रमाणित क्लाउड सॉफ्टवेयर।",
+    spotlight: {
+      image: "/banners/hospital-management.png",
+      badge: "LIVE PRODUCTION ERP",
+      titleEn: "Sachin-Net MediCare Hospital ERP 2.0",
+      titleHi: "Sachin-Net मेडिकेयर हॉस्पिटल ERP 2.0",
+      descEn:
+        "Complete OPD/IPD registration, doctor scheduling, pharmacy billing, and pathology lab management running live.",
+      descHi:
+        "OPD/IPD रजिस्ट्रेशन, डॉक्टर अपॉइंटमेंट, फार्मेसी और पैथोलॉजी बिलिंग का लाइव सॉफ्टवेयर।",
+      modules: ["OPD / IPD Cloud", "Pharmacy Billing", "Doctor Portal"],
+      ctaEn: "View Live Portfolio →",
+      ctaHi: "लाइव पोर्टफोलियो देखें →",
+      href: "/portfolio",
+    },
     items: [
-      { labelEn: "Portfolio & Case Studies", labelHi: "पोर्टफोलियो और लाइव प्रोजेक्ट्स", href: "/portfolio", desc: "100+ delivered enterprise & community projects" },
-      { labelEn: "AI Tools & Products", labelHi: "फ्री AI टूल्स और प्रोडक्ट्स", href: "/ai-tools", desc: "Try our in-house AI generators & utilities" },
-      { labelEn: "Custom Quotation Plans", labelHi: "कस्टम कोटेशन प्लान्स", href: "/pricing", desc: "Tailored scope & quotation based on requirements" },
-      { labelEn: "Live: MedCare Hospital ERP ↗", labelHi: "लाइव: मेडकेयर हॉस्पिटल ERP ↗", href: "https://medicarehospitl.netlify.app/", external: true, desc: "Production hospital OPD/IPD & doctor portal" },
-      { labelEn: "Live: Gram Vikas NGO Portal ↗", labelHi: "लाइव: ग्राम विकास NGO पोर्टल ↗", href: "https://gramvikasfoundation.netlify.app/", external: true, desc: "80G tax receipts, member ID cards & donations" },
-      { labelEn: "Live: Rurally Smile Org ↗", labelHi: "लाइव: रूरली स्माइल फाउंडेशन ↗", href: "https://rurallysmile-org.vercel.app/", external: true, desc: "Rural welfare foundation digital platform" },
+      {
+        labelEn: "Sachin-Net Live Portfolio & Case Studies",
+        labelHi: "Sachin-Net पोर्टफोलियो और केस स्टडी",
+        href: "/portfolio",
+        image: "/images/portfolio-health.png",
+        desc: "Explore 100+ delivered enterprise & institutional software projects",
+      },
+      {
+        labelEn: "Sachin-Net MediCare Hospital ERP ↗",
+        labelHi: "लाइव: Sachin-Net हॉस्पिटल ERP ↗",
+        href: "https://medicarehospitl.netlify.app/",
+        external: true,
+        image: "/banners/hospital-management.png",
+        desc: "Live hospital OPD/IPD, pharmacy & doctor appointment system",
+      },
+      {
+        labelEn: "Sachin-Net Gram Vikas NGO Cloud ↗",
+        labelHi: "लाइव: ग्राम विकास NGO पोर्टल ↗",
+        href: "https://gramvikasfoundation.netlify.app/",
+        external: true,
+        image: "/banners/digital-services.png",
+        desc: "Live NGO portal with 80G receipts & instant member ID cards",
+      },
+      {
+        labelEn: "Sachin-Net Health Portal 2.0 ↗",
+        labelHi: "लाइव: मेडिकेयर हेल्थ पोर्टल 2.0 ↗",
+        href: "https://medicare-hospitl-1.netlify.app/",
+        external: true,
+        image: "/images/portfolio-health.png",
+        desc: "Multi-specialty clinic & diagnostic lab booking platform",
+      },
+      {
+        labelEn: "Sachin-Net Rurally Smile NGO Suite ↗",
+        labelHi: "लाइव: रूरली स्माइल फाउंडेशन ↗",
+        href: "https://rurallysmile-org.vercel.app/",
+        external: true,
+        image: "/banners/website-development.png",
+        desc: "Rural impact foundation portal with online donation gateway",
+      },
+      {
+        labelEn: "Sachin-Net Interactive AI Tools Lab",
+        labelHi: "Sachin-Net इंटरैक्टिव AI लैब",
+        href: "/ai-tools",
+        image: "/banners/hosting-servers.png",
+        desc: "Test our live AI content, code & business automation tools",
+      },
     ],
   },
   {
     id: "insights",
     labelEn: "Insights",
-    labelHi: "इनसाइट्स और न्यूज़",
+    labelHi: "इनसाइट्स और कोटेशन",
+    taglineEn: "SACHIN-NET TECH RESEARCH & QUOTATION ENGINE",
+    taglineHi: "SACHIN-NET टेक्नोलॉजी रिसर्च और कोटेशन",
+    overviewEn:
+      "Strategic technology guides, digital transformation blueprints, and tailored software scope quotation plans.",
+    overviewHi:
+      "डिजिटल ट्रांसफॉर्मेशन गाइड्स, टेक्नोलॉजी लेख और कस्टम सॉफ्टवेयर कोटेशन प्लान्स।",
+    spotlight: {
+      image: "/banners/school-management.png",
+      badge: "CUSTOM QUOTATION MODEL",
+      titleEn: "Sachin-Net Tailored Software Quotation",
+      titleHi: "Sachin-Net कस्टम सॉफ्टवेयर कोटेशन",
+      descEn:
+        "Zero fixed server pricing — receive an official Sachin-Net quotation engineered to your exact software scope.",
+      descHi:
+        "क्लाइंट की आवश्यकता और सॉफ्टवेयर फीचर्स के अनुसार सीधा कस्टम कोटेशन प्राप्त करें।",
+      modules: ["Scope Analysis", "Custom Architecture", "Direct Consultation"],
+      ctaEn: "Get Custom Quotation →",
+      ctaHi: "कस्टम कोटेशन लें →",
+      href: "/pricing",
+    },
     items: [
-      { labelEn: "Newsroom & Tech Blog", labelHi: "टेक्नोलॉजी ब्लॉग और अपडेट्स", href: "/blog", desc: "Latest insights on AI, web engineering & SEO" },
-      { labelEn: "Website Scope Guide", labelHi: "वेबसाइट गाइड (India)", href: "/blog/website-cost-in-india", desc: "How to plan your business website architecture" },
-      { labelEn: "School Digital Transformation", labelHi: "स्कूल डिजिटलाइजेशन गाइड", href: "/blog/school-website-kaise-banaye", desc: "Complete guide to modernizing school operations" },
+      {
+        labelEn: "Sachin-Net Tech Newsroom & Blog",
+        labelHi: "Sachin-Net टेक ब्लॉग और न्यूज़",
+        href: "/blog",
+        image: "/banners/website-development.png",
+        desc: "Executive articles on Next.js, ERP architecture & AI growth",
+      },
+      {
+        labelEn: "Sachin-Net Custom Quotation Plans",
+        labelHi: "Sachin-Net कस्टम कोटेशन प्लान्स",
+        href: "/pricing",
+        image: "/banners/digital-services.png",
+        desc: "Compare Starter, Corporate, NGO & Enterprise ERP scopes",
+      },
+      {
+        labelEn: "Enterprise Website Architecture Guide",
+        labelHi: "वेबसाइट आर्किटेक्चर गाइड 2026",
+        href: "/blog/website-cost-in-india",
+        image: "/banners/hosting-servers.png",
+        desc: "How to plan scalable web & cloud systems for your business",
+      },
+      {
+        labelEn: "School Digital Transformation Blueprint",
+        labelHi: "स्कूल ERP डिजिटलाइजेशन गाइड",
+        href: "/blog/school-website-kaise-banaye",
+        image: "/banners/school-management.png",
+        desc: "Step-by-step roadmap to paperless school administration",
+      },
     ],
   },
   {
     id: "portals",
     labelEn: "Portals",
-    labelHi: "क्लाइंट और पार्टनर पोर्टल",
+    labelHi: "क्लाइंट व पार्टनर पोर्टल",
+    taglineEn: "SACHIN-NET DIGITAL ECOSYSTEM PORTALS",
+    taglineHi: "SACHIN-NET क्लाइंट, पार्टनर और एडमिन पोर्टल्स",
+    overviewEn:
+      "Dedicated cloud dashboards for clients to book services and track milestones, partners to earn commissions, and 2FA admin control.",
+    overviewHi:
+      "क्लाइंट बुकिंग, लाइव प्रोजेक्ट ट्रैकिंग, पार्टनर कमीशन और 2FA एडमिन सुरक्षा के लिए समर्पित पोर्टल।",
+    spotlight: {
+      image: "/banners/hosting-servers.png",
+      badge: "SACHIN-NET CLOUD ECOSYSTEM",
+      titleEn: "Sachin-Net Multi-Portal Control Center",
+      titleHi: "Sachin-Net मल्टी-पोर्टल कंट्रोल सेंटर",
+      descEn:
+        "Real-time project tracking, partner lead payouts, and 2FA OTP encrypted administrator security.",
+      descHi:
+        "रियल-टाइम प्रोजेक्ट ट्रैकिंग, पार्टनर पेआउट और 2FA ईमेल OTP सुरक्षा।",
+      modules: ["Client Dashboard", "Partner 25% Hub", "2FA Admin OTP"],
+      ctaEn: "Open Client Portal →",
+      ctaHi: "क्लाइंट पोर्टल खोलें →",
+      href: "/customer/dashboard",
+    },
     items: [
-      { labelEn: "Client Project Dashboard", labelHi: "क्लाइंट प्रोजेक्ट डैशबोर्ड", href: "/customer/dashboard", desc: "Track live project milestones & deliverables" },
-      { labelEn: "Partner Registration", labelHi: "पार्टनर प्रोग्राम रजिस्ट्रेशन", href: "/partner/register", desc: "Join as an official referral or agency partner" },
-      { labelEn: "Partner Earnings Portal", labelHi: "पार्टनर डैशबोर्ड", href: "/partner/dashboard", desc: "Submit leads & request instant UPI payouts" },
-      { labelEn: "Admin Security Console", labelHi: "एडमिन कंट्रोल पैनल", href: "/admin/login", desc: "2FA OTP protected administrator gateway" },
+      {
+        labelEn: "Sachin-Net Online Service Booking",
+        labelHi: "Sachin-Net ऑनलाइन सर्विस बुकिंग",
+        href: "/book-service",
+        image: "/banners/website-development.png",
+        desc: "Book website, ERP, NGO portal or AI software online",
+      },
+      {
+        labelEn: "Sachin-Net Client Project Dashboard",
+        labelHi: "Sachin-Net क्लाइंट प्रोजेक्ट डैशबोर्ड",
+        href: "/customer/dashboard",
+        image: "/banners/digital-services.png",
+        desc: "Track live booking status, milestones & engineer updates",
+      },
+      {
+        labelEn: "Sachin-Net Partner Registration",
+        labelHi: "Sachin-Net पार्टनर रजिस्ट्रेशन",
+        href: "/partner/register",
+        image: "/images/portfolio-shop.png",
+        desc: "Join Sachin-Net Partner Program & earn up to 25% commission",
+      },
+      {
+        labelEn: "Sachin-Net Partner Earnings Portal",
+        labelHi: "Sachin-Net पार्टनर डैशबोर्ड",
+        href: "/partner/dashboard",
+        image: "/images/portfolio-edu.png",
+        desc: "Submit client referrals, track deals & request UPI payouts",
+      },
+      {
+        labelEn: "Sachin-Net Admin Console (2FA OTP)",
+        labelHi: "Sachin-Net एडमिन पैनल (2FA OTP)",
+        href: "/admin/login",
+        image: "/banners/hosting-servers.png",
+        desc: "Locked single-user administrator console with Email OTP",
+      },
+    ],
+  },
+  {
+    id: "careers",
+    labelEn: "Careers",
+    labelHi: "करियर (Careers)",
+    taglineEn: "CAREERS & ENGINEERING AT SACHIN-NET",
+    taglineHi: "SACHIN-NET में सॉफ्टवेयर करियर और अवसर",
+    overviewEn:
+      "Join Sachin-Net Technologies as a Full Stack Developer, Python AI Engineer, UI/UX Designer, or Growth Partner.",
+    overviewHi:
+      "Sachin-Net Technologies की इंजीनियरिंग टीम से जुड़ें — फुल-स्टैक, AI/ML और UI/UX में अवसर।",
+    spotlight: {
+      image: "/images/portfolio-edu.png",
+      badge: "JOIN SACHIN-NET TEAM",
+      titleEn: "Build the Future of AI & Enterprise Software",
+      titleHi: "AI और सॉफ्टवेयर के भविष्य का निर्माण करें",
+      descEn:
+        "Work on live Healthcare ERP, School Cloud, and Next.js platforms with direct mentorship from Founder Sachin Kushwaha.",
+      descHi:
+        "लाइव हॉस्पिटल ERP, स्कूल क्लाउड और Next.js प्रोजेक्ट्स पर काम करने का सुनहरा अवसर।",
+      modules: ["Full Stack Next.js", "Python & GenAI", "Remote & Siwan HQ"],
+      ctaEn: "View Open Positions →",
+      ctaHi: "सभी जॉब्स देखें →",
+      href: "/careers",
+    },
+    items: [
+      {
+        labelEn: "Sachin-Net Engineering Careers",
+        labelHi: "Sachin-Net इंजीनियरिंग करियर",
+        href: "/careers",
+        image: "/banners/website-development.png",
+        desc: "Apply for Full Stack, Python AI/ML & UI/UX positions",
+      },
+      {
+        labelEn: "Sachin-Net Partner & Agency Program",
+        labelHi: "Sachin-Net डिजिटल पार्टनर प्रोग्राम",
+        href: "/partner/register",
+        image: "/banners/digital-services.png",
+        desc: "Become an official Sachin-Net software partner in your city",
+      },
     ],
   },
 ];
@@ -126,9 +428,12 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", onClick);
   }, [activeDropdown]);
 
+  const activeMenuData = corporateMenus.find((m) => m.id === activeDropdown);
+
   return (
     <header
       ref={navRef}
+      onMouseLeave={() => setActiveDropdown(null)}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-black text-white border-b ${
         scrolled ? "border-white/15 shadow-[0_8px_30px_rgba(0,0,0,0.85)]" : "border-white/10"
       }`}
@@ -167,20 +472,21 @@ export default function Navbar() {
                 key={menu.id}
                 className="relative"
                 onMouseEnter={() => setActiveDropdown(menu.id)}
-                onMouseLeave={() => setActiveDropdown(null)}
               >
                 <button
                   type="button"
                   onClick={() => setActiveDropdown(isOpen ? null : menu.id)}
                   className={`px-3 py-2 rounded-md inline-flex items-center gap-1.5 transition-colors cursor-pointer ${
-                    isOpen ? "text-white bg-white/10" : "text-slate-200 hover:text-white hover:bg-white/5"
+                    isOpen
+                      ? "text-white bg-white/15 border-b-2 border-blue-500"
+                      : "text-slate-200 hover:text-white hover:bg-white/5"
                   }`}
                   aria-expanded={isOpen}
                 >
                   <span>{lang === "hi" ? menu.labelHi : menu.labelEn}</span>
                   <svg
                     className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-white" : ""
+                      isOpen ? "rotate-180 text-blue-400" : ""
                     }`}
                     fill="none"
                     viewBox="0 0 24 24"
@@ -190,72 +496,9 @@ export default function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-
-                {/* Mega Dropdown Panel */}
-                {isOpen && (
-                  <div className="absolute left-0 top-full pt-2 w-80 sm:w-96 z-50">
-                    <div className="rounded-xl bg-[#0b0f17] border border-white/15 shadow-2xl p-3 backdrop-blur-xl">
-                      <div className="text-[10px] font-bold uppercase tracking-widest text-blue-400 px-3 py-1.5 border-b border-white/10 mb-1.5">
-                        {lang === "hi" ? menu.labelHi : menu.labelEn}
-                      </div>
-                      <div className="space-y-1 max-h-[70vh] overflow-y-auto">
-                        {menu.items.map((item) =>
-                          item.external ? (
-                            <a
-                              key={item.href}
-                              href={item.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={() => setActiveDropdown(null)}
-                              className="block px-3 py-2.5 rounded-lg hover:bg-blue-600/20 border border-transparent hover:border-blue-500/30 transition-all group"
-                            >
-                              <div className="text-xs sm:text-sm font-semibold text-white group-hover:text-blue-300 flex items-center justify-between">
-                                <span>{lang === "hi" ? item.labelHi : item.labelEn}</span>
-                              </div>
-                              {item.desc && (
-                                <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">{item.desc}</p>
-                              )}
-                            </a>
-                          ) : (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              onClick={() => setActiveDropdown(null)}
-                              className={`block px-3 py-2.5 rounded-lg transition-all group ${
-                                pathname === item.href
-                                  ? "bg-blue-600/25 border border-blue-500/40"
-                                  : "hover:bg-white/[0.06] border border-transparent"
-                              }`}
-                            >
-                              <div className="text-xs sm:text-sm font-semibold text-white group-hover:text-blue-300">
-                                {lang === "hi" ? item.labelHi : item.labelEn}
-                              </div>
-                              {item.desc && (
-                                <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">{item.desc}</p>
-                              )}
-                            </Link>
-                          )
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                )}
               </li>
             );
           })}
-
-          <li>
-            <Link
-              href="/careers"
-              className={`px-3 py-2 rounded-md inline-flex items-center transition-colors ${
-                pathname === "/careers"
-                  ? "text-white font-semibold bg-white/10"
-                  : "text-slate-200 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              {lang === "hi" ? "करियर" : "Careers"}
-            </Link>
-          </li>
         </ul>
 
         {/* Right: TCS-Style Search, Global Language Switcher, Contact Us & Corporate Emblem */}
@@ -338,9 +581,143 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* FULL-WIDTH TCS CORPORATE IT SOFTWARE MEGA-MENU WITH IMAGES & TEXT BOXES */}
+      {activeMenuData && (
+        <div className="hidden lg:block w-full bg-[#070b14] border-t border-b border-white/15 shadow-[0_25px_70px_rgba(0,0,0,0.95)] z-50">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-8 py-8 grid grid-cols-12 gap-8 items-start">
+            {/* Left Column (3 Cols): Category Overview Box */}
+            <div className="col-span-3 pr-6 border-r border-white/10 flex flex-col justify-between h-full">
+              <div>
+                <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-blue-400 mb-2">
+                  {lang === "hi" ? activeMenuData.taglineHi : activeMenuData.taglineEn}
+                </span>
+                <h3 className="text-2xl font-normal text-white tracking-tight">
+                  {lang === "hi" ? activeMenuData.labelHi : activeMenuData.labelEn}
+                </h3>
+                <p className="mt-3 text-xs text-slate-400 leading-relaxed">
+                  {lang === "hi" ? activeMenuData.overviewHi : activeMenuData.overviewEn}
+                </p>
+              </div>
+
+              <div className="mt-6 pt-5 border-t border-white/10 space-y-2.5">
+                <Link
+                  href="/book-service"
+                  onClick={() => setActiveDropdown(null)}
+                  className="w-full py-2.5 px-4 rounded-full bg-[#1d63dc] hover:bg-[#2a73f0] text-white text-xs font-semibold inline-flex items-center justify-center gap-2 transition-all"
+                >
+                  <span>{lang === "hi" ? "कस्टम कोटेशन प्राप्त करें" : "Request Custom Quotation"}</span>
+                  <span>→</span>
+                </Link>
+                <a
+                  href={`https://wa.me/${site.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-2 px-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 text-slate-200 text-xs font-medium inline-flex items-center justify-center gap-2 transition-all"
+                >
+                  <Icon name="whatsapp" className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>{site.phone}</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Center Column (5 Cols): Grid of Sachin-Net IT Software Image + Text Boxes */}
+            <div className="col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {activeMenuData.items.map((item) => {
+                const ItemWrapper = item.external ? "a" : Link;
+                const wrapperProps = item.external
+                  ? { href: item.href, target: "_blank", rel: "noopener noreferrer" }
+                  : { href: item.href };
+
+                return (
+                  <ItemWrapper
+                    key={item.href + item.labelEn}
+                    {...wrapperProps}
+                    onClick={() => setActiveDropdown(null)}
+                    className="group p-2.5 rounded-xl bg-[#0e1526] hover:bg-[#15203a] border border-white/10 hover:border-blue-500/50 transition-all flex items-start gap-3"
+                  >
+                    <div className="relative w-14 h-14 rounded-lg overflow-hidden shrink-0 border border-white/15 bg-slate-900">
+                      <Image
+                        src={item.image || "/banners/website-development.png"}
+                        alt={item.labelEn}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-300"
+                        sizes="56px"
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="text-xs font-bold text-white group-hover:text-blue-300 leading-snug line-clamp-1">
+                        {lang === "hi" ? item.labelHi : item.labelEn}
+                      </div>
+                      <p className="text-[11px] text-slate-400 mt-1 leading-snug line-clamp-2">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </ItemWrapper>
+                );
+              })}
+            </div>
+
+            {/* Right Column (4 Cols): Featured Sachin-Net IT Software Spotlight Image & Text Box */}
+            {activeMenuData.spotlight && (
+              <div className="col-span-4 rounded-2xl bg-[#101829] border border-blue-500/30 overflow-hidden shadow-xl">
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-950">
+                  <Image
+                    src={activeMenuData.spotlight.image}
+                    alt={activeMenuData.spotlight.titleEn}
+                    fill
+                    className="object-cover object-center opacity-90"
+                    sizes="400px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#101829] via-transparent to-black/30" />
+                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-blue-600/90 text-[10px] font-extrabold uppercase tracking-wider text-white shadow">
+                    {activeMenuData.spotlight.badge}
+                  </span>
+                </div>
+
+                <div className="p-5">
+                  <h4 className="text-base font-bold text-white leading-snug">
+                    {lang === "hi"
+                      ? activeMenuData.spotlight.titleHi
+                      : activeMenuData.spotlight.titleEn}
+                  </h4>
+                  <p className="mt-1.5 text-xs text-slate-300 leading-relaxed">
+                    {lang === "hi"
+                      ? activeMenuData.spotlight.descHi
+                      : activeMenuData.spotlight.descEn}
+                  </p>
+
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {activeMenuData.spotlight.modules.map((mod) => (
+                      <span
+                        key={mod}
+                        className="text-[10px] px-2 py-0.5 rounded bg-blue-500/15 border border-blue-400/30 text-blue-200 font-semibold"
+                      >
+                        ✓ {mod}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Link
+                    href={activeMenuData.spotlight.href}
+                    onClick={() => setActiveDropdown(null)}
+                    className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-blue-400 hover:text-blue-300"
+                  >
+                    <span>
+                      {lang === "hi"
+                        ? activeMenuData.spotlight.ctaHi
+                        : activeMenuData.spotlight.ctaEn}
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
       <SiteSearch open={searchOpen} onClose={() => setSearchOpen(false)} />
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer with Sachin-Net IT Software Image & Text Boxes */}
       {open && (
         <div className="lg:hidden bg-[#05070c] border-t border-white/15 max-h-[calc(100vh-4rem)] overflow-y-auto">
           <div className="px-4 py-4 space-y-2 pb-10">
@@ -355,7 +732,9 @@ export default function Navbar() {
                   >
                     <span>{lang === "hi" ? menu.labelHi : menu.labelEn}</span>
                     <svg
-                      className={`w-4 h-4 text-slate-400 transition-transform ${isExpanded ? "rotate-180 text-blue-400" : ""}`}
+                      className={`w-4 h-4 text-slate-400 transition-transform ${
+                        isExpanded ? "rotate-180 text-blue-400" : ""
+                      }`}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -366,28 +745,36 @@ export default function Navbar() {
                   </button>
 
                   {isExpanded && (
-                    <div className="mt-1 pl-3 border-l-2 border-blue-500/40 space-y-1">
-                      {menu.items.map((item) =>
-                        item.external ? (
-                          <a
-                            key={item.href}
-                            href={item.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block py-2 px-2 text-sm text-slate-300 hover:text-white"
+                    <div className="mt-2 space-y-2 px-1 pb-2">
+                      {menu.items.map((item) => {
+                        const MobileWrapper = item.external ? "a" : Link;
+                        const mobileProps = item.external
+                          ? { href: item.href, target: "_blank", rel: "noopener noreferrer" }
+                          : { href: item.href };
+                        return (
+                          <MobileWrapper
+                            key={item.href + item.labelEn}
+                            {...mobileProps}
+                            className="flex items-center gap-3 p-2 rounded-xl bg-white/[0.04] border border-white/10"
                           >
-                            {lang === "hi" ? item.labelHi : item.labelEn}
-                          </a>
-                        ) : (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            className="block py-2 px-2 text-sm text-slate-300 hover:text-white"
-                          >
-                            {lang === "hi" ? item.labelHi : item.labelEn}
-                          </Link>
-                        )
-                      )}
+                            <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0">
+                              <Image
+                                src={item.image || "/banners/website-development.png"}
+                                alt={item.labelEn}
+                                fill
+                                className="object-cover"
+                                sizes="48px"
+                              />
+                            </div>
+                            <div className="min-w-0 flex-1">
+                              <div className="text-xs font-bold text-white truncate">
+                                {lang === "hi" ? item.labelHi : item.labelEn}
+                              </div>
+                              <p className="text-[11px] text-slate-400 line-clamp-1">{item.desc}</p>
+                            </div>
+                          </MobileWrapper>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
@@ -395,15 +782,11 @@ export default function Navbar() {
             })}
 
             <div className="border-b border-white/10 pb-2">
-              <Link href="/careers" className="block py-2.5 px-2 font-semibold text-base text-white">
-                {lang === "hi" ? "करियर (Careers)" : "Careers"}
-              </Link>
               <Link href="/contact" className="block py-2.5 px-2 font-semibold text-base text-white">
                 {lang === "hi" ? "संपर्क करें (Contact Us)" : "Contact us"}
               </Link>
             </div>
 
-            {/* Quick Links from navMainLinks / navMoreLinks for fast access */}
             <div className="pt-3 grid grid-cols-2 gap-2">
               <Link
                 href="/book-service"
