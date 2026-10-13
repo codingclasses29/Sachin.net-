@@ -187,6 +187,13 @@ assert(portfolioPageContent.includes("Live Client Websites"), "app/portfolio/pag
 
 const pageHomeContent = fs.readFileSync(path.join(rootDir, "app", "page.js"), "utf8");
 assert(pageHomeContent.includes("<BannerSlider"), "app/page.js renders <BannerSlider />");
+assert(pageHomeContent.includes("<WhatsNewSection"), "app/page.js renders TCS <WhatsNewSection />");
+assert(pageHomeContent.includes("<CuttingEdgeSolutionsSection"), "app/page.js renders TCS <CuttingEdgeSolutionsSection />");
+
+const whatsNewPath = path.join(rootDir, "components", "home", "WhatsNewSection.js");
+assert(fs.existsSync(whatsNewPath), "components/home/WhatsNewSection.js exists");
+const cuttingEdgePath = path.join(rootDir, "components", "home", "CuttingEdgeSolutionsSection.js");
+assert(fs.existsSync(cuttingEdgePath), "components/home/CuttingEdgeSolutionsSection.js exists");
 
 // 5. Verify Special Offers Component
 console.log("\n--- [5] Checking Special Promotional Offers ---");
